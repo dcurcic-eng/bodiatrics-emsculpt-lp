@@ -1,0 +1,1466 @@
+<!doctype html>
+<html lang="en">
+<head>
+<script>document.documentElement.classList.add("js-anim")</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="googlebot" content="noindex, nofollow">
+<title>Bodiatrics Suwanee | EMSCULPT NEO: Build Muscle, Burn Fat</title>
+<meta name="description" content="Feel 20,000 muscle contractions in a $200 EMSCULPT NEO Mini Demo Session with a free consultation from Dr. Johnson's team at Bodiatrics in Suwanee, GA.">
+<meta name="theme-color" content="#0F1D33">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="images/favicon-512.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Mulish:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.3.23/dist/lenis.css">
+<link rel="preload" as="image" href="images/hero.jpg">
+<style>
+/* ===== Tokens ===== */
+:root{
+  --navy:#172A46; --navy-deep:#0F1D33; --navy-card:#1F3454;
+  --gold:#B89A62; --gold-light:#CBB17F; --gold-dark:#8A6F3E;
+  --steel:#8FA8B2; --steel-dark:#5E7A86; --steel-light:#A5BAC2; --mist:#DCE4E8;
+  --sage:#61776E; --sage-light:#A9BCB3;
+  --ink:#2D3136; --cream:#F6F3EC; --sand:#EDE8DE; --silver:#C2C9CF; --white:#FFFFFF;
+  --serif:"Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --sans:"Mulish", "Helvetica Neue", Arial, sans-serif;
+  /* Layout scales with the screen: horizontal gutters in vw, vertical rhythm in vh.
+     Each clamp tops out at the original desktop px value, so the 1440x900 view is unchanged. */
+  --pad-x:clamp(48px,4.45vw,64px);
+  --header-h:84px;
+  --vh:1vh;                                   /* replaced by 1svh where supported (mobile browser bars) */
+  --hero-h:calc(100 * var(--vh) - var(--header-h)); /* header + hero = exactly one screen */
+  --hero-pad-y:clamp(32px,8.9vh,80px);
+  --sec-y:clamp(64px,12.45vh,112px);          /* 112px at 900px tall */
+  --sec-y-lg:clamp(72px,13.35vh,120px);       /* 120px at 900px tall */
+  --sec-y-sm:clamp(56px,10.67vh,96px);        /* 96px at 900px tall */
+}
+@supports (height:1svh){:root{--vh:1svh}}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:var(--header-h)}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.4;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden;width:100%}
+img,video{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+h1,h2,h3,p{margin:0}
+ul{margin:0;padding:0;list-style:none}
+.serif{font-family:var(--serif);font-weight:600}
+.it{font-style:italic}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+section{width:100%}
+.stars{display:flex;gap:3px}
+.stars img{width:14px;height:14px;object-fit:contain}
+
+/* Clip line masks for H2 reveals */
+.line{display:block;overflow:hidden;padding-bottom:.1em;margin-bottom:-.1em}
+.line>span{display:block}
+
+/* ===== Buttons ===== */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:49px;padding:0 36px;border:1px solid transparent;border-radius:0;font:500 13px/1 var(--sans);text-transform:uppercase;white-space:nowrap;cursor:pointer;position:relative;-webkit-tap-highlight-color:transparent}
+.btn img{width:14px;height:14px;object-fit:contain}
+.btn:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.btn-navy{background:var(--navy);border-color:var(--navy);color:var(--cream)}
+.btn-ivory{background:var(--cream);border-color:var(--cream);color:var(--navy)}
+.btn-ghost{background:rgba(255,255,255,0);border-color:#F6F3EC80;color:var(--cream)}
+.btn-ghost.solid-border{border-color:var(--cream)}
+.btn-gold{background:rgba(184,154,98,0);border-color:var(--gold);color:var(--gold-light)}
+.btn-steel{background:var(--steel);border-color:var(--steel);color:var(--navy)}
+.btn-slate{background:var(--steel-dark);border-color:var(--steel-dark);color:var(--white)}
+.btn .ico-swap{position:relative;width:14px;height:14px}
+.btn .ico-swap img{position:absolute;inset:0}
+.btn .ico-swap .alt{opacity:0}
+
+/* ===== Header ===== */
+.site-header{position:sticky;top:0;z-index:50;height:var(--header-h);background:var(--navy-deep);border-bottom:1px solid #F6F3EC24;display:flex;align-items:center;justify-content:space-between;padding:0 var(--pad-x)}
+.logo{display:block;width:190px;height:63px;flex:none}
+.logo img{width:100%;height:100%;object-fit:contain;object-position:left center}
+.nav{display:flex;align-items:center;gap:36px}
+.nav a{font:500 13px/1.3 var(--sans);color:#F6F3ECD9;text-transform:uppercase}
+.header-right{display:flex;align-items:center;gap:32px}
+.header-phone{display:flex;align-items:center;gap:10px;font:600 16px/1.3 var(--sans);color:var(--cream)}
+.header-phone img{width:16px;height:16px}
+.menu-btn{display:none;width:44px;height:44px;align-items:center;justify-content:center;flex-direction:column;gap:5px;border:1px solid #F6F3EC40}
+.menu-btn span{display:block;width:18px;height:1.5px;background:var(--cream)}
+.mobile-nav{display:none}
+.header-cta,.mnav-call{display:none}
+
+/* ===== Hero ===== */
+.hero{position:relative;height:auto;min-height:var(--hero-h);display:flex;align-items:center;justify-content:space-between;gap:96px;padding:var(--hero-pad-y) var(--pad-x);color:var(--cream);
+  background:
+    linear-gradient(0deg,#0F1D3399 0%,#0F1D3300 35%),
+    linear-gradient(90deg,#0F1D33F2 0%,#0F1D33C7 30%,#0F1D3300 60%),
+    url("images/hero.jpg") center/cover no-repeat var(--navy-deep);overflow:hidden}
+.hero-copy{width:740px;max-width:100%;display:flex;flex-direction:column;gap:clamp(16px,3.1vh,28px);flex:0 1 740px;position:relative;z-index:1}
+.rating{display:flex;align-items:center;gap:10px;font:500 14px/1.3 var(--sans);color:var(--gold-light)}
+.hero h1{font-family:var(--serif);font-weight:600;font-size:min(76px,8.45vh);letter-spacing:-1.5px;color:var(--cream)}
+.hero h1 .l1{display:block;line-height:1.05}
+.hero h1 .l2{display:block;line-height:1.12;font-style:italic;color:var(--gold-light)}
+.hero-sub{width:560px;max-width:100%;font-size:18px;line-height:1.6;color:#F6F3ECD9}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.facts{position:relative;width:600px;max-width:100%;display:flex;padding-top:24px}
+.facts .rule{position:absolute;left:0;top:0;width:100%;height:1px;background:#F6F3EC24}
+.fact{flex:1 1 0;display:flex;flex-direction:column;gap:2px;padding:0 20px;border-left:1px solid #F6F3EC24}
+.fact:first-of-type{padding:0 20px 0 0;border-left:0}
+.fact b{font:600 30px/1.2 var(--serif);letter-spacing:-.5px;color:var(--cream)}
+.fact span{font:500 13px/1.3 var(--sans);color:var(--silver)}
+.hero-card-wrap{flex:none;height:min(640px,calc(var(--hero-h) - 2 * var(--hero-pad-y)));width:auto;aspect-ratio:9/16;transform:rotate(-3deg);position:relative;z-index:1}
+.hero-card{position:relative;width:100%;height:100%;border-radius:28px;overflow:hidden;box-shadow:0 24px 60px #0F1D3380;background:#0F1D33 url("images/hero-vertical-clean-trim-poster.jpg") center/cover no-repeat;isolation:isolate}
+.hero-card::after{content:"";position:absolute;inset:0;border-radius:28px;border:1px solid #F6F3EC33;pointer-events:none;z-index:3}
+.hero-card video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+
+/* ===== Stats ===== */
+.stats{background:var(--navy-deep);padding:var(--sec-y) var(--pad-x) var(--sec-y-sm);display:flex;flex-direction:column;gap:64px;color:var(--cream)}
+.stats-head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px}
+.h2{font-family:var(--serif);font-weight:600;font-size:54px;letter-spacing:-1px;line-height:1.1}
+.h2 .accent{font-style:italic}
+.stats-head .h2{width:620px;max-width:100%}
+.stats-head .h2 .accent{color:var(--gold-light);line-height:1.15}
+.note{font-size:13px;line-height:1.3;color:var(--silver)}
+.stats-grid{display:flex;border-top:1px solid #F6F3EC24;border-bottom:1px solid #F6F3EC24}
+.stat{flex:1 1 0;min-width:0;height:clamp(260px,37.8vh,340px);display:flex;flex-direction:column;justify-content:space-between;padding:40px 32px;border-left:1px solid #F6F3EC24}
+.stat:first-child{padding:40px 32px 40px 0;border-left:0}
+.stat .num{font:600 112px/1 var(--serif);letter-spacing:-2px;white-space:nowrap}
+.stat .num.sm{font-size:84px}
+.stat .num.gold{color:var(--gold-light)}
+.stat h3{font:600 26px/1.3 var(--serif);color:var(--cream)}
+.stat p{font-size:15px;line-height:1.6;color:var(--silver)}
+.stat .txt{display:flex;flex-direction:column;gap:8px}
+
+/* ===== Before and After ===== */
+.ba{background:var(--cream);padding:var(--sec-y) var(--pad-x);display:flex;flex-direction:column;gap:48px}
+.head-row{display:flex;justify-content:space-between;align-items:flex-end;gap:32px}
+.ba-heading{width:760px;max-width:100%;display:flex;flex-direction:column;gap:16px}
+.eyebrow{font:500 14px/1.3 var(--sans);color:var(--gold-dark)}
+.dark-h2{color:var(--ink)}
+.dark-h2 .accent{color:var(--sage)}
+.sub{font-size:17px;line-height:1.6;color:#2D3136C7}
+.ba-grid{display:flex;flex-direction:column;gap:32px}
+.ba-row{display:flex;gap:32px}
+.pair{flex:1 1 0;min-width:0;background:var(--white);border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:18px;box-shadow:inset 0 0 0 1px #2D313614}
+.pair-imgs{display:flex;gap:8px}
+.ba-img{position:relative;flex:1 1 0;height:214px;border-radius:4px;overflow:hidden;background:#EEE;cursor:zoom-in}
+.ba-img:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.ba-img .zoom-hint{position:absolute;right:10px;top:10px;width:32px;height:32px;border-radius:16px;background:#172A46CC;display:flex;align-items:center;justify-content:center;opacity:0;z-index:1}
+.ba-img .zoom-hint img{width:14px;height:14px}
+.ba-img img{width:100%;height:100%;object-fit:cover}
+.chip{position:absolute;left:12px;top:172px;height:28px;padding:0 12px;display:flex;align-items:center;font:600 12px/1 var(--sans);z-index:1}
+.chip.before{background:#FFFFFFE6;color:var(--navy)}
+.chip.after{background:var(--navy);color:var(--cream)}
+.caption{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:0 4px 4px}
+.caption h3{font:600 26px/1.3 var(--serif);letter-spacing:-.5px;color:var(--ink)}
+.caption span{font-size:13px;line-height:1.3;color:#2D31369E;text-align:right}
+.disclaimer{font-size:12px;line-height:1.6;color:#2D31369E}
+
+/* ===== Quiz ===== */
+.quiz{background:var(--sand);padding:var(--sec-y) var(--pad-x);display:flex;flex-direction:column;align-items:center;gap:48px}
+.quiz-head{width:760px;max-width:100%;display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}
+.h2-inline{display:flex;flex-wrap:wrap;justify-content:center;column-gap:14px}
+.h2-inline .line{line-height:1.2}
+.quiz-head p{font-size:18px;line-height:1.6;color:#2D3136C7}
+.quiz-card{width:880px;max-width:100%;background:var(--white);border:1px solid #2D313624;padding:56px;display:flex;flex-direction:column;gap:36px}
+.progress{display:flex;flex-direction:column;gap:12px}
+.progress-labels{display:flex;justify-content:space-between;gap:12px;font-size:13px;line-height:1.3}
+.progress-labels .step{font-weight:500;color:var(--gold-dark)}
+.progress-labels .time{color:#2D31369E}
+.track{height:2px;background:#2D31361A;position:relative;overflow:hidden}
+.track i{position:absolute;left:0;top:0;height:100%;width:100%;background:var(--navy);transform-origin:left center;transform:scaleX(.3333)}
+.quiz-body{display:flex;flex-direction:column;gap:36px}
+.question{font:600 44px/1.15 var(--serif);letter-spacing:-.8px;color:var(--ink)}
+.answers{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.answer{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 24px;background:var(--cream);border:1px solid #2D313624;text-align:left;width:100%}
+.answer .a-text{display:flex;flex-direction:column;gap:4px;min-width:0}
+.answer .a-title{font:600 24px/1.2 var(--serif);color:var(--ink)}
+.answer .a-sub{font-size:14px;line-height:1.3;color:#2D31369E}
+.answer .box{flex:none;width:24px;height:24px;background:var(--white);border:1px solid #2D31364D;display:flex;align-items:center;justify-content:center}
+.answer .box img{width:14px;height:14px;opacity:0}
+.answer.is-selected{background:var(--navy);border-color:var(--navy)}
+.answer.is-selected .a-title{color:var(--cream)}
+.answer.is-selected .a-sub{color:#F6F3ECBF}
+.answer.is-selected .box{background:var(--gold);border-color:var(--gold)}
+.answer.is-selected .box img{opacity:1}
+.answer:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.quiz-nav{display:flex;justify-content:space-between;align-items:center;gap:24px;padding-top:28px;border-top:1px solid #2D313624}
+.quiz-nav p{font-size:13px;line-height:1.4;color:#2D31369E}
+.quiz-nav .actions{display:flex;align-items:center;gap:20px;flex:none}
+.link-btn{font:500 13px/1 var(--sans);text-transform:uppercase;color:var(--navy);background:linear-gradient(currentColor,currentColor) 0 100%/100% 1px no-repeat;padding-bottom:4px}
+.result p{font-size:17px;line-height:1.6;color:#2D3136C7;margin-top:16px;max-width:680px}
+.exclusions{width:880px;max-width:100%;display:flex;align-items:center;padding:24px 0;border-top:1px solid #2D313629;border-bottom:1px solid #2D313629}
+.exclusions .label{flex:none;width:200px;padding-right:24px;font:500 14px/1.4 var(--sans);color:var(--gold-dark)}
+.exclusions .item{flex:1 1 0;padding:0 20px;border-left:1px solid #2D313629;font-size:14px;line-height:1.5;color:var(--ink)}
+.ex-note{width:880px;max-width:100%;text-align:center;font-size:13px;line-height:1.4;color:#2D31369E}
+
+/* ===== Science ===== */
+.science{background:var(--navy);padding:var(--sec-y-lg) var(--pad-x);display:flex;flex-direction:column;gap:64px;color:var(--cream)}
+.sci-top{display:flex;align-items:flex-end;gap:64px}
+.sci-top .h2{flex:1 1 0;font-size:60px;letter-spacing:-1.2px;line-height:1.08}
+.sci-top .h2 .accent{color:var(--steel-light)}
+.sci-top p{flex:0 1 560px;width:560px;font-size:18px;line-height:1.6;color:#F6F3ECD9}
+.sci-mid{display:flex;gap:24px}
+.mechs{flex:0 0 420px;width:420px;display:flex;flex-direction:column}
+.mech{display:flex;flex-direction:column;gap:10px;padding:28px 0;box-shadow:inset 0 1px 0 #F6F3EC33}
+.mech h3{font:600 30px/1.15 var(--serif);letter-spacing:-.5px}
+.mech p{font-size:16px;line-height:1.6;color:#F6F3ECBF}
+.callout{display:flex;flex-direction:column;gap:4px;padding-top:28px;box-shadow:inset 0 1px 0 #F6F3EC33}
+.callout .big{font:600 96px/1 var(--serif);letter-spacing:-2.4px;color:var(--gold-light)}
+.callout p{font-size:16px;line-height:1.6;color:#F6F3ECD9}
+.callout small{font-size:12px;line-height:1.6;color:var(--silver)}
+.apps{flex:1 1 0;display:flex;gap:24px;padding-left:40px;min-width:0}
+.app{flex:1 1 0;min-width:0;background:var(--navy-card);display:flex;flex-direction:column}
+.app .photo{height:clamp(280px,42.2vh,380px);background:var(--cream);overflow:hidden}
+.app .photo img{width:100%;height:100%;object-fit:cover}
+.app .txt{padding:28px;display:flex;flex-direction:column;gap:10px}
+.app .lbl{font:500 13px/1.3 var(--sans);color:var(--gold-light)}
+.app h3{font:600 32px/1.1 var(--serif);letter-spacing:-.6px}
+.app p{font-size:15px;line-height:1.6;color:#F6F3ECBF}
+
+/* ===== What to Expect ===== */
+.expect{background:var(--white);padding:var(--sec-y-lg) var(--pad-x);display:flex;flex-direction:column;gap:56px}
+.exp-top{display:flex;gap:80px}
+.exp-left{flex:1 1 0;min-width:0;display:flex;flex-direction:column;gap:48px}
+.exp-left .h2{letter-spacing:-1.1px}
+.exp-header{display:flex;flex-direction:column;gap:16px}
+.exp-header p{font-size:17px;line-height:1.6;color:var(--ink)}
+.facts-list h3{font:600 30px/1.2 var(--serif);letter-spacing:-.5px;color:var(--ink);margin-bottom:16px}
+.frow{display:flex;justify-content:space-between;gap:24px;padding:18px 0;box-shadow:inset 0 1px 0 #2D313626;background:rgba(237,232,222,0);cursor:default}
+.frow dt{font-size:14px;line-height:1.4;color:#2D3136B3}
+.frow dt{white-space:nowrap}
+.frow dd{margin:0;flex:none;white-space:nowrap;text-align:right;font:600 15px/1.4 var(--sans);color:var(--ink)}
+.facts-list dl{margin:0}
+.facts-list .btn{margin-top:24px}
+.exp-img{flex:0 1 700px;width:700px;height:clamp(520px,77.8vh,700px);position:relative;overflow:hidden}
+.exp-img img{width:100%;height:100%;object-fit:cover}
+.img-tag{position:absolute;left:24px;bottom:24px;height:48px;padding:0 20px;background:#FFFFFFF2;display:flex;align-items:center;gap:10px;white-space:nowrap}
+.img-tag b{font:600 22px/1.2 var(--serif);color:var(--ink)}
+.img-tag span{font-size:13px;color:#2D31369E}
+.chart{display:flex;flex-direction:column;gap:16px;padding-top:56px;box-shadow:inset 0 1px 0 #2D313626}
+.bars{display:flex;align-items:flex-end;gap:16px;height:460px;box-shadow:inset 0 -1px 0 var(--ink)}
+.bar{flex:1 1 0;min-width:0;cursor:default;display:flex;flex-direction:column;justify-content:space-between;padding:28px 32px 32px;transform-origin:bottom center}
+.bar .t{display:flex;flex-direction:column;gap:6px}
+.bar .t b{font:600 40px/1.05 var(--serif);letter-spacing:-.8px}
+.bar .t span,.bar .c p{font-size:13px;line-height:1.3}
+.bar .c{display:flex;flex-direction:column;gap:8px;padding-top:18px}
+.bar .c h3{font:600 17px/1.3 var(--sans)}
+.bar .c p{font-size:14px;line-height:1.5}
+.bar.b1{height:230px;background:var(--mist);color:var(--navy)}
+.bar.b1 .t span,.bar.b1 .c p{color:#172A46C7}
+.bar.b1 .c{box-shadow:inset 0 1px 0 #172A4633}
+.bar.b2{height:340px;background:var(--steel);color:var(--navy)}
+.bar.b2 .t span,.bar.b2 .c p{color:#172A46D9}
+.bar.b2 .c{box-shadow:inset 0 1px 0 #172A4640}
+.bar.b3{height:460px;background:var(--navy);color:var(--cream)}
+.bar.b3 .t span,.bar.b3 .c p{color:#F6F3ECCC}
+.bar.b3 .c{box-shadow:inset 0 1px 0 #F6F3EC33}
+.chart-note{font-size:12px;line-height:1.4;color:#2D31369E}
+
+/* ===== Reviews ===== */
+.reviews{background:var(--cream);padding:var(--sec-y-lg) var(--pad-x);display:flex;flex-direction:column;align-items:center;gap:64px}
+.pull{width:1080px;max-width:100%;display:flex;flex-direction:column;align-items:center;gap:28px;text-align:center}
+.pull .stars{gap:4px}
+.pull .stars img{width:22px;height:22px}
+.pull blockquote{margin:0;font:600 50px/1.2 var(--serif);letter-spacing:-1px;color:var(--ink)}
+.attrib{display:flex;align-items:center;gap:16px;font:500 15px/1.3 var(--sans);color:var(--ink)}
+.attrib i{display:block;width:120px;height:1px;background:var(--ink)}
+.quote-grid{width:100%;display:flex;flex-direction:column;gap:20px}
+.quote-row{width:100%;display:flex;gap:20px;min-height:300px}
+.quote-row+.quote-row{min-height:260px}
+.qcard{position:relative;will-change:transform}
+.qcard .src{transition:none}
+.qcard{flex:1 1 0;min-width:0;background:var(--white);padding:32px;display:flex;flex-direction:column;justify-content:space-between;gap:18px}
+.qcard .top{display:flex;flex-direction:column;gap:16px}
+.qcard .stars{gap:4px}
+.qcard .stars img{width:15px;height:15px}
+.qcard p{font-size:17px;line-height:1.6;color:var(--ink)}
+.qcard .src{font:500 14px/1.3 var(--sans);color:#2D31369E}
+.gbadge{flex:0 0 300px;width:300px;background:var(--navy);padding:32px;display:flex;flex-direction:column;justify-content:center;gap:10px}
+.gbadge .lbl{font:500 14px/1.3 var(--sans);color:var(--gold)}
+.gbadge .score{font:600 80px/1 var(--serif);letter-spacing:-1.6px;color:var(--cream)}
+.gbadge .stars{gap:4px}
+.gbadge .stars img{width:16px;height:16px}
+.gbadge .sub2{font-size:15px;line-height:1.3;color:#F6F3ECBF}
+
+/* ===== About ===== */
+.about{background:var(--white);padding:var(--sec-y-lg) var(--pad-x);display:flex;align-items:center;gap:80px}
+.team-photo{flex:0 1 540px;width:540px;height:clamp(520px,77.8vh,700px);overflow:hidden}
+.team-photo img{width:100%;height:100%;object-fit:cover}
+.about-text{flex:1 1 0;min-width:0;display:flex;flex-direction:column;gap:28px}
+.about-text .h2{letter-spacing:-1.1px}
+.about-text>p{font-size:17px;line-height:1.6;color:var(--ink)}
+.provider{display:flex;align-items:center;gap:20px;padding:20px 0;box-shadow:inset 0 1px 0 #2D313626}
+.provider img{flex:none;width:72px;height:72px;border-radius:50%;object-fit:cover}
+.provider div{display:flex;flex-direction:column;gap:4px;min-width:0}
+.provider h3{font:600 24px/1.2 var(--serif);color:var(--ink)}
+.provider p{font-size:14px;line-height:1.5;color:#2D3136C7}
+
+/* ===== Lead Form ===== */
+.lead{background:var(--navy-deep);padding:var(--sec-y) var(--pad-x);display:flex;gap:96px;color:var(--cream)}
+.offer{flex:1 1 0;min-width:0;display:flex;flex-direction:column;gap:32px;padding-top:16px}
+.offer .h2 .accent{color:var(--gold-light);line-height:1.15}
+.offer>p{font-size:18px;line-height:1.6;color:#F6F3ECD9}
+.checklist{border-bottom:1px solid #F6F3EC24}
+.checklist li{display:flex;align-items:center;gap:16px;padding:18px 0;border-top:1px solid #F6F3EC24;font:500 17px/1.3 var(--sans);background:rgba(246,243,236,0);cursor:default}
+.checklist img{width:18px;height:18px;flex:none}
+.prefer{display:flex;align-items:center;gap:12px;font:600 17px/1.3 var(--sans);color:var(--cream)}
+.prefer img{width:18px;height:18px}
+.form-panel{flex:0 1 600px;width:600px;background:var(--white);padding:48px;display:flex;flex-direction:column;gap:20px;color:var(--ink);position:relative}
+.form-panel h3{font:600 34px/1.2 var(--serif);letter-spacing:-.5px}
+.form-panel .fsub{font-size:15px;line-height:1.4;color:#2D3136C7}
+.frow2{display:flex;gap:16px}
+.field{flex:1 1 0;min-width:0;display:flex;flex-direction:column;gap:6px}
+.field label{font:600 13px/1.3 var(--sans);color:var(--ink)}
+.field input,.field select{width:100%;height:50px;padding:0 16px;background:var(--cream);border:1px solid #2D313629;border-radius:0;font:400 15px/1.3 var(--sans);color:var(--ink);outline:none;-webkit-appearance:none;appearance:none}
+.field input::placeholder{color:#2D31369E}
+.field select{background:var(--cream) url("images/icons/icon-chevron-down-navy.png") right 16px center/14px 14px no-repeat;padding-right:44px;cursor:pointer}
+.field select:invalid{color:#2D31369E}
+.field.err input,.field.err select{border-color:#A94442}
+.field .msg{display:none;font-size:12px;color:#A94442}
+.field.err .msg{display:block}
+.submit{width:100%;height:52px;font-size:14px}
+.submit .spinner{position:absolute;left:50%;top:50%;width:16px;height:16px;margin:-8px 0 0 -8px;border:1.5px solid #F6F3EC55;border-top-color:var(--cream);border-radius:50%;opacity:0;visibility:hidden}
+.consent{display:flex;gap:12px;align-items:flex-start;cursor:pointer}
+.consent input{flex:none;width:18px;height:18px;margin:2px 0 0;border:1px solid #2D313666;border-radius:0;-webkit-appearance:none;appearance:none;background:var(--white);cursor:pointer;position:relative}
+.consent input:checked{background:var(--navy) url("images/icons/icon-check-ivory.png") center/11px 11px no-repeat;border-color:var(--navy)}
+.consent input:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.consent.err input{border-color:#A94442}
+.consent span{font-size:12px;line-height:1.6;color:#2D3136C7}
+.form-disc{font-size:12px;line-height:1.6;color:#2D31369E}
+.form-success{display:none;flex-direction:column;gap:16px}
+.form-success p{font-size:16px;line-height:1.6;color:#2D3136C7}
+
+/* ===== Location ===== */
+.location{background:var(--cream);padding:var(--sec-y) var(--pad-x);display:flex;align-items:center;gap:80px}
+.loc-info{flex:1 1 0;min-width:0;display:flex;flex-direction:column;gap:36px}
+.loc-info .h2 .accent{line-height:1.15}
+.info-grid{border-bottom:1px solid #2D313626}
+.info{display:flex;gap:20px;padding:20px 0;border-top:1px solid #2D313626}
+.info img{flex:none;width:18px;height:18px}
+.info div{display:flex;flex-direction:column;gap:4px}
+.info .k{font:500 13px/1.3 var(--sans);color:var(--gold-dark)}
+.info .v{font-size:17px;line-height:1.5;color:var(--ink)}
+.info .v a{background:linear-gradient(currentColor,currentColor) 0 100%/0% 1px no-repeat}
+.serving{font-size:15px;line-height:1.6;color:#2D3136C7}
+.map{flex:0 1 720px;width:720px;height:clamp(420px,62.2vh,560px);position:relative;overflow:hidden;border:1px solid #2D313626;background:#E4E1D8}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(.35) contrast(1.02)}
+
+/* ===== FAQ ===== */
+.faq{background:var(--sand);padding:var(--sec-y) var(--pad-x);display:flex;flex-direction:column;align-items:center;gap:48px}
+.faq-list{width:920px;max-width:100%;border-bottom:1px solid #2D313629}
+.faq-item{border-top:1px solid #2D313629}
+.faq-q{width:100%;display:flex;align-items:center;gap:24px;padding:26px 0;text-align:left;cursor:pointer}
+.faq-q span{flex:1 1 auto;font:600 30px/1.2 var(--serif);letter-spacing:-.5px;color:var(--ink)}
+.faq-q .ico{position:relative;flex:none;width:22px;height:22px}
+.faq-q .ico img{position:absolute;inset:0;width:22px;height:22px}
+.faq-q .ico .minus{opacity:0}
+.faq-item.open .faq-q span{color:var(--gold-dark)}
+.faq-item.open .faq-q .ico .minus{opacity:1}
+.faq-item.open .faq-q .ico .plus{opacity:0}
+.faq-q:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+.faq-a{height:0;overflow:hidden}
+.faq-item.open .faq-a{height:auto}
+.faq-a p{width:760px;max-width:100%;font-size:17px;line-height:1.65;color:#2D3136C7;margin:0;padding:0 0 26px}
+
+/* ===== Final CTA ===== */
+.final{position:relative;height:clamp(480px,66.67vh,600px);padding:var(--sec-y-sm) var(--pad-x);display:flex;flex-direction:column;justify-content:center;gap:28px;color:var(--cream);overflow:hidden;background:var(--navy)}
+.final .bg{position:absolute;left:0;right:0;top:-60px;bottom:-60px;background:url("images/footer-bg-2400.jpg") center/cover no-repeat;z-index:0}
+.final::before{content:"";position:absolute;inset:0;background:#172A46B3;z-index:1}
+.final>*:not(.bg){position:relative;z-index:2}
+.final .h2{width:720px;max-width:100%;font-size:64px;letter-spacing:-1.3px;line-height:1.08}
+.final .h2 .accent{color:var(--sage-light);line-height:1.14}
+.final>p{width:560px;max-width:100%;font-size:18px;line-height:1.6;color:#F6F3ECD9}
+.final .small{font-size:13px;color:var(--silver)}
+
+/* ===== Footer ===== */
+.footer{background:var(--navy);padding:clamp(56px,9.8vh,88px) var(--pad-x) clamp(32px,5.35vh,48px);display:flex;flex-direction:column;gap:56px;color:var(--cream)}
+.foot-logo{width:200px;height:66px;flex:none}
+.foot-logo img{width:100%;height:100%;object-fit:contain;object-position:left center}
+.tagline{font:600 28px/1.2 var(--serif);letter-spacing:-.5px;color:var(--cream)}
+.foot-cols{display:grid;grid-template-columns:minmax(240px,1.1fr) minmax(280px,1.2fr) minmax(180px,.8fr) auto;gap:64px;padding-bottom:8px}
+.fcol.brand{gap:24px}
+.foot-logo{display:block}
+.fcol{display:flex;flex-direction:column;gap:14px}
+.fcol.w{min-width:0}
+.fcol h3{font:600 24px/1.3 var(--serif)}
+.fcol .ci{display:flex;gap:12px;font-size:15px;line-height:1.6}
+.fcol .ci img{width:16px;height:16px;flex:none;margin-top:4px}
+.fcol .ci.pl{padding-left:28px}
+.fcol .area{padding:4px 0 0 28px;font-size:14px;line-height:1.6;color:#F6F3ECBF}
+.fcol .fl{font-size:15px;line-height:1.3;color:#F6F3ECD9;align-self:flex-start}
+.fcol.follow{gap:18px}
+.socials{display:flex;gap:12px}
+.social{width:44px;height:44px;border-radius:22px;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 0 1px var(--gold);background:rgba(184,154,98,0)}
+.social img{width:20px;height:20px}
+.foot-bottom{padding-top:24px;border-top:1px solid #F6F3EC24;font-size:13px;color:var(--silver)}
+
+/* ===== Lightbox ===== */
+.lightbox{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:48px 96px}
+.lightbox.is-open{display:flex}
+.lb-backdrop{position:absolute;inset:0;background:#0F1D33F2}
+.lb-panel{position:relative;margin:0;display:flex;flex-direction:column;align-items:center;gap:16px;max-width:100%;max-height:100%}
+.lb-img{height:min(calc(100vh - 170px),820px);width:auto;max-width:100%;object-fit:contain;border-radius:4px;background:#000;box-shadow:0 24px 60px #0F1D3380}
+.lb-cap{display:flex;align-items:center;gap:12px;color:var(--cream)}
+.lb-cap .chip{position:static;height:26px}
+.lb-cap b{font:600 24px/1.2 var(--serif)}
+.lb-cap span.count{font-size:13px;color:var(--silver)}
+.lb-btn{position:absolute;z-index:2;width:52px;height:52px;border-radius:26px;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 0 1px #F6F3EC4D;background:rgba(246,243,236,0)}
+.lb-btn img{width:18px;height:18px}
+.lb-btn:focus-visible{outline:2px solid var(--gold-light);outline-offset:2px}
+.lb-close{top:24px;right:24px}
+.lb-close img{transform:rotate(45deg)}
+.lb-prev{left:24px;top:50%;margin-top:-26px}
+.lb-prev img{transform:rotate(90deg)}
+.lb-next{right:24px;top:50%;margin-top:-26px}
+.lb-next img{transform:rotate(-90deg)}
+@media (max-width:767px){
+  .lightbox{padding:72px 12px 88px}
+  .lb-img{height:auto;width:100%;max-height:calc(100vh - 220px)}
+  .lb-prev,.lb-next{top:auto;bottom:20px;margin-top:0}
+  .lb-prev{left:calc(50% - 64px)}.lb-next{right:calc(50% - 64px)}
+  .lb-close{top:12px;right:12px}
+}
+
+/* Tablet and mobile (tap view): hover-only cues are shown permanently */
+@media (hover:none),(pointer:coarse),(max-width:1199px){
+  .ba-img .zoom-hint{opacity:1;width:28px;height:28px;right:8px;top:8px}
+}
+
+/* ===== Initial states (prevent flash before GSAP) ===== */
+html.js-anim [data-hero-in],html.js-anim [data-animate],html.js-anim [data-stagger]>*,html.js-anim [data-img-reveal]{visibility:hidden}
+@media (prefers-reduced-motion: reduce){
+  html.js-anim [data-hero-in],html.js-anim [data-animate],html.js-anim [data-stagger]>*,html.js-anim [data-img-reveal]{visibility:visible}
+}
+
+/* ===== Responsive ===== */
+@media (max-width:1359px){
+  .nav{gap:24px}
+  .header-right{gap:24px}
+  .hero{gap:56px}
+  .hero h1{font-size:min(68px,7.6vh)}
+  .stat .num{font-size:92px}
+  .stat .num.sm{font-size:70px}
+  .foot-cols{gap:48px}
+  .lead{gap:64px}
+  .about,.location,.exp-top{gap:56px}
+}
+@media (max-width:1199px){
+  :root{--pad-x:clamp(24px,3.34vw,40px)}
+  .nav{display:none}
+  .menu-btn{display:flex}
+  .header-right{gap:16px}
+  .mobile-nav{display:flex;flex-direction:column;position:fixed;left:0;right:0;top:var(--header-h);z-index:49;background:var(--navy-deep);border-bottom:1px solid #F6F3EC24;padding:8px var(--pad-x) 24px;visibility:hidden;opacity:0}
+  .mobile-nav a{font:500 14px/1 var(--sans);text-transform:uppercase;color:#F6F3ECD9;padding:18px 0;border-bottom:1px solid #F6F3EC14}
+  .mobile-nav .btn{margin-top:20px;color:var(--navy)}
+  .mobile-nav .btn-ghost{color:var(--cream)}
+  .hero h1{font-size:min(60px,6.8vh)}
+  .hero-card-wrap{height:min(533px,calc(var(--hero-h) - 2 * var(--hero-pad-y)))}
+    .stats-grid{flex-wrap:wrap}
+  .stat{flex:1 1 50%;height:clamp(240px,31vh,280px);border-left:0;padding:36px 32px 36px 0}
+  .stat:nth-child(2n){border-left:1px solid #F6F3EC24;padding-left:32px}
+  .stat:nth-child(n+3){border-top:1px solid #F6F3EC24}
+  .stat .num{font-size:96px}
+  .stat .num.sm{font-size:80px}
+  .sci-mid{flex-direction:column;gap:48px}
+  .mechs{flex:none;width:100%;display:grid;grid-template-columns:1fr 1fr 1fr;column-gap:32px}
+  .apps{padding-left:0}
+  .exp-top{flex-direction:column}
+  .exp-img{flex:none;width:100%;height:auto;aspect-ratio:16/10}
+  .img-tag{top:auto;bottom:24px}
+  .quote-row{flex-wrap:wrap}
+  .qcard{flex:1 1 calc(50% - 10px)}
+  .gbadge{flex:1 1 calc(50% - 10px);width:auto}
+  .about{align-items:stretch}
+  .team-photo{flex:0 0 40%;height:auto;min-height:560px}
+  .lead{flex-direction:column}
+  .form-panel{flex:none;width:100%}
+  .location{flex-direction:column;align-items:stretch}
+  .map{flex:none;width:100%;height:clamp(360px,50vh,480px)}
+  .foot-cols{grid-template-columns:1fr 1fr;gap:48px 40px}
+}
+@media (max-width:899px){
+  /* Tablet portrait and mobile: hero fills the screen, the session video becomes the backdrop */
+  .hero{min-height:var(--hero-h);flex-direction:column;justify-content:flex-end;align-items:stretch;gap:0;
+    padding:clamp(24px,5vh,64px) var(--pad-x) clamp(28px,6vh,72px);
+    background:url("images/hero-vertical-clean-trim-poster.jpg") center 20%/cover no-repeat var(--navy-deep)}
+  .hero::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+    background:linear-gradient(0deg,#0F1D33F7 0%,#0F1D33E6 38%,#0F1D3380 68%,#0F1D3333 100%)}
+  .hero-copy{flex:none;width:100%;max-width:640px;z-index:2}
+  .hero-card-wrap{position:absolute;inset:0;width:auto;height:auto;aspect-ratio:auto;transform:none;z-index:0}
+  .hero-card{border-radius:0;box-shadow:none;background-position:center 20%}
+  .hero-card::after{display:none}
+  .hero-card video{object-position:center 20%}
+  .head-row{flex-direction:column;align-items:flex-start}
+  .stats-head{flex-direction:column;align-items:flex-start;gap:16px}
+  .ba-row{flex-direction:column}
+  .sci-top{flex-direction:column;align-items:flex-start;gap:24px}
+  .sci-top p{flex:none;width:100%}
+  .mechs{grid-template-columns:1fr}
+  .about{flex-direction:column}
+  .team-photo{flex:none;width:100%;min-height:0;height:auto;aspect-ratio:4/5;max-height:640px}
+  .exclusions{flex-wrap:wrap;row-gap:12px}
+  .exclusions .label{width:100%;padding:0}
+  .exclusions .item{flex:1 1 100%;padding:0 0 0 16px}
+    
+}
+@media (max-width:767px){
+  :root{--header-h:68px}
+  .logo{width:clamp(108px,30vw,140px);height:auto;aspect-ratio:190/63}
+  /* Mobile header: primary CTA plus menu, everything else lives in the menu */
+  .header-right{gap:10px}
+  .header-phone,.site-header .btn-gold{display:none}
+  .header-cta{display:inline-flex;height:44px;padding:0 clamp(10px,3.4vw,16px);font-size:clamp(11px,3.1vw,12px)}
+  .mobile-nav .mnav-book{display:none}
+  .mobile-nav .mnav-call{display:inline-flex}
+  .btn{padding:0 24px}
+  .cta-row .btn{flex:1 1 100%}
+  :root{--pad-x:clamp(16px,5.13vw,24px)}
+  .hero{padding:clamp(20px,4vh,48px) var(--pad-x) clamp(24px,4.5vh,48px)}
+  .hero-copy{gap:clamp(12px,2.5vh,24px)}
+  .rating{font-size:13px}
+  .hero h1{font-size:min(46px,11.8vw,6.4vh);letter-spacing:-1px}
+  .hero-sub{font-size:clamp(15px,2.3vh,17px);line-height:1.5}
+  .cta-row{gap:10px}
+  .facts{padding-top:clamp(12px,2vh,20px)}
+  .fact{padding:0 8px;min-width:0}
+  .fact:first-of-type{padding:0 8px 0 0}
+  .fact b{font-size:clamp(18px,3vh,24px);letter-spacing:-.3px;white-space:nowrap}
+  .fact span{font-size:11.5px}
+    .h2,.sci-top .h2{font-size:40px;letter-spacing:-.8px}
+  .final .h2{font-size:44px;letter-spacing:-.9px}
+  .stats,.ba,.quiz,.science,.expect,.reviews,.about,.lead,.location,.faq{padding-top:clamp(56px,11vh,80px);padding-bottom:clamp(56px,11vh,80px)}
+  .stats{gap:40px}
+  .stat{flex:1 1 50%;height:auto;min-height:0;gap:24px;padding:28px 16px 28px 0;border-left:0}
+  .stat:nth-child(2n){padding:28px 0 28px 16px;border-left:1px solid #F6F3EC24}
+  .stat .num{font-size:60px;letter-spacing:-1px}
+  .stat .num.sm{font-size:44px;letter-spacing:-1px}
+  .stat h3{font-size:22px}
+  .stat p{font-size:14px}
+  .ba{gap:36px}
+  .ba-row,.ba-grid{gap:20px}
+  .pair{padding:12px;gap:14px}
+  .ba-img{height:auto;aspect-ratio:3/4}
+  .chip{top:auto;bottom:10px;left:10px;height:24px;padding:0 10px;font-size:11px}
+  .caption{flex-direction:column;align-items:flex-start;gap:4px}
+  .caption h3{font-size:22px}
+  .caption span{text-align:left}
+  .quiz{gap:36px}
+  .quiz-card{padding:28px 20px;gap:28px}
+  .question{font-size:32px}
+  .answers{grid-template-columns:1fr;gap:12px}
+  .answer{padding:18px}
+  .answer .a-title{font-size:21px}
+  .quiz-nav{flex-direction:column-reverse;align-items:stretch}
+  .quiz-nav .actions{justify-content:space-between}
+  .quiz-nav .actions .btn{flex:1 1 auto}
+  .science{gap:44px}
+  .apps{flex-direction:column}
+  .app .photo{height:clamp(220px,38vh,280px)}
+  .callout .big{font-size:80px}
+  .expect{gap:44px}
+  .frow{flex-direction:column;gap:4px}
+  .frow dd{width:auto;text-align:left;white-space:normal}
+  .exp-img{aspect-ratio:1/1}
+  .img-tag{left:12px;right:12px;bottom:12px;height:auto;padding:12px 14px;flex-direction:column;align-items:flex-start;gap:2px;white-space:normal}
+  .img-tag b{font-size:20px}
+  /* Vertical bars, left to right, heights keep the desktop 50 / 74 / 100 ratio */
+  .bars{height:clamp(420px,70vh,500px);gap:6px}
+  .bar{padding:14px 10px 14px}
+  .bar.b1{height:52%}.bar.b2{height:74%}.bar.b3{height:100%}
+  .bar .t{gap:4px}
+  .bar .t b{font-size:22px;letter-spacing:-.3px}
+  .bar .t span{font-size:11px}
+  .bar .c{gap:4px;padding-top:10px}
+  .bar .c h3{font-size:13px}
+  .bar .c p{font-size:11.5px;line-height:1.4}
+  .reviews{gap:44px}
+  .pull blockquote{font-size:32px;letter-spacing:-.5px}
+  .attrib i{width:40px}
+  .quote-row,.quote-row+.quote-row{flex-direction:column;min-height:0;gap:16px}
+  .quote-grid{gap:16px}
+  .qcard,.gbadge{flex:none;width:100%}
+  .qcard{padding:24px}
+  .gbadge .score{font-size:64px}
+  .about{gap:40px}
+  .provider{align-items:flex-start;gap:16px}
+  .provider img{width:56px;height:56px}
+  .lead{gap:48px}
+  .form-panel{padding:28px 20px}
+  .frow2{flex-direction:column}
+  .checklist li{font-size:16px}
+  .location{gap:44px}
+  .map{height:clamp(300px,52vh,380px)}
+  .faq{gap:32px}
+  .faq-q{padding:22px 0;gap:16px}
+  .faq-q span{font-size:24px}
+  .faq-a p{font-size:16px;padding-bottom:22px}
+  .final{height:auto;min-height:clamp(440px,76vh,560px);padding:clamp(56px,11vh,80px) var(--pad-x)}
+  .final .btn{flex:1 1 100%}
+  .footer{padding:clamp(48px,9vh,64px) var(--pad-x) clamp(28px,5vh,40px);gap:40px}
+  .tagline{font-size:24px}
+  .foot-cols{grid-template-columns:1fr;gap:40px}
+}
+</style>
+</head>
+<body>
+<header class="site-header" id="top">
+  <a class="logo" href="#top" aria-label="Bodiatrics home"><img src="images/general-bodiatrics-logo-reversed.png" alt="Bodiatrics Wellness Longevity Center" width="190" height="63"></a>
+  <nav class="nav" aria-label="Page sections">
+    <a href="#results">RESULTS</a>
+    <a href="#how-it-works">HOW IT WORKS</a>
+    <a href="#reviews">REVIEWS</a>
+    <a href="#quiz">AM I A CANDIDATE?</a>
+  </nav>
+  <div class="header-right">
+    <a class="header-phone" href="tel:+14783304146" aria-label="Call (478) 330-4146"><img src="images/icons/icon-call-gold.svg" alt=""><span>(478) 330-4146</span></a>
+    <a class="btn btn-gold" href="#book">BOOK MY $200 DEMO</a>
+    <a class="btn btn-ivory header-cta" href="#book">BOOK $200 DEMO</a>
+    <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">
+  <a href="#results">RESULTS</a>
+  <a href="#how-it-works">HOW IT WORKS</a>
+  <a href="#reviews">REVIEWS</a>
+  <a href="#quiz">AM I A CANDIDATE?</a>
+  <a class="btn btn-ivory mnav-book" href="#book">BOOK MY $200 DEMO</a>
+  <a class="btn btn-ghost solid-border mnav-call" href="tel:+14783304146"><img src="images/icons/icon-call-ivory.svg" alt="">CALL (478) 330-4146</a>
+</nav>
+
+<main>
+<!-- Hero -->
+<section class="hero" aria-label="EMSCULPT NEO in Suwanee">
+  <div class="hero-copy" data-hero-in="fade">
+    <div class="rating">
+      <div class="stars" aria-hidden="true"><img src="images/icons/icon-star-gold.png" alt=""><img src="images/icons/icon-star-gold.png" alt=""><img src="images/icons/icon-star-gold.png" alt=""><img src="images/icons/icon-star-gold.png" alt=""><img src="images/icons/icon-star-gold.png" alt=""></div>
+      <span>5.0 on Google. EMSCULPT NEO in Suwanee, GA</span>
+    </div>
+    <h1><span class="l1">Build Muscle. Burn Fat.</span><span class="l2">In 30 Minutes.</span></h1>
+    <p class="hero-sub">Feel 20,000 muscle contractions for yourself in a $200 Mini Demo Session, with a free consultation from Dr. Johnson's team.</p>
+    <div class="cta-row">
+      <a class="btn btn-ivory" href="#book">BOOK MY $200 DEMO</a>
+      <a class="btn btn-ghost" href="tel:+14783304146"><img src="images/icons/icon-call-ivory.svg" alt="">CALL (478) 330-4146</a>
+    </div>
+    <div class="facts">
+      <i class="rule" aria-hidden="true"></i>
+      <div class="fact"><b>30 min</b><span>per session</span></div>
+      <div class="fact"><b>About 4</b><span>sessions</span></div>
+      <div class="fact"><b>Zero</b><span>downtime</span></div>
+      <div class="fact"><b>FDA</b><span>cleared</span></div>
+    </div>
+  </div>
+  <div class="hero-card-wrap" data-hero-in="card">
+    <div class="hero-card">
+      <video class="hero-video" autoplay muted loop playsinline preload="auto" disablepictureinpicture poster="images/hero-vertical-clean-trim-poster.jpg" aria-label="EMSCULPT NEO session video">
+        <source src="images/hero-vertical-clean-trim.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+
+<!-- Clinical Stats -->
+<section class="stats" aria-labelledby="stats-title">
+  <div class="stats-head">
+    <h2 class="h2" id="stats-title" data-clip><span class="line"><span>Clinical Results</span></span><span class="line accent"><span>You Can Measure</span></span></h2>
+    <p class="note" data-animate="fade-in">Based on BTL clinical data. Individual results vary.</p>
+  </div>
+  <div class="stats-grid" data-stagger>
+    <div class="stat"><div class="num gold" data-count="25" data-suffix="%">25%</div><div class="txt"><h3>More muscle</h3><p>Average increase in muscle in the treated area.</p></div></div>
+    <div class="stat"><div class="num" data-count="30" data-suffix="%">30%</div><div class="txt"><h3>Less fat</h3><p>Average reduction in fat in the treated area.</p></div></div>
+    <div class="stat"><div class="num sm gold" data-count="20000" data-comma>20,000</div><div class="txt"><h3>Contractions</h3><p>Supramaximal contractions in a single 30 minute session.</p></div></div>
+    <div class="stat"><div class="num sm" data-count="2000" data-suffix="+">2000+</div><div class="txt"><h3>Patients</h3><p>Satisfied patients treated at Bodiatrics.</p></div></div>
+  </div>
+</section>
+
+<!-- Before and After -->
+<section class="ba" id="results" aria-labelledby="ba-title">
+  <div class="head-row">
+    <div class="ba-heading">
+      <p class="eyebrow" data-animate="fade-up">Unretouched clinical results</p>
+      <h2 class="h2 dark-h2" id="ba-title" data-clip><span class="line"><span>Real Results From</span></span><span class="line accent"><span>EMSCULPT NEO</span></span></h2>
+      <p class="sub" data-animate="fade-up">Same patient, same angle, before and after a course of treatment. Photos supplied by BTL and treating physicians.</p>
+    </div>
+    <a class="btn btn-navy" href="#book" data-animate="fade-up">BOOK MY $200 DEMO</a>
+  </div>
+  <div class="ba-grid">
+    <div class="ba-row" data-stagger>
+      <article class="pair"><div class="pair-imgs"><div class="ba-img" role="button" tabindex="0" aria-label="View full size"><span class="zoom-hint" aria-hidden="true"><img src="images/icons/icon-plus-ivory-bold.png" alt=""></span><img loading="lazy" src="images/btl-emsculpt-neo-b1-abdomen-male-david-kent-md.png" alt="Male abdomen before EMSCULPT NEO"><span class="chip before">Before</span></div><div class="ba-img" role="button" tabindex="0" aria-label="View full size"><span class="zoom-hint" aria-hidden="true"><img src="images/icons/icon-plus-ivory-bold.png" alt=""></span><img loading="lazy" src="images/btl-emsculpt-neo-a1-abdomen-male-david-kent-md.png" alt="Male abdomen after EMSCULPT NEO"><span class="chip after">After</span></div></div><div class="caption"><h3>Abdomen, male</h3></div></article>
+      <article class="pair"><div class="pair-imgs"><div class="ba-img" role="button" tabindex="0" aria-label="View full size"><span class="zoom-hint" aria-hidden="true"><img src="images/icons/icon-plus-ivory-bold.png" alt=""></span><img loading="lazy" src="images/btl-emsculpt-neo-b3-abdomen-female-btl-aesthetics.png" alt="Female abdomen before EMSCULPT NEO"><span class="chip before">Before</span></div><div class="ba-img" role="button" tabindex="0" aria-label="View full size"><span class="zoom-hint" aria-hidden="true"><img src="images/icons/icon-plus-ivory-bold.png" alt=""></span><img loading="lazy" src="images/btl-emsculpt-neo-a3-abdomen-female-btl-aesthetics.png" alt="Female abdomen after EMSCULPT NEO"><span class="chip after">After</span></div></div><div class="caption"><h3>Abdomen, female</h3></div></article>
+    </div>
+    <div class="ba-row" data-stagger>
+      <article class="pair"><div class="pair-imgs"><div class="ba-img" role="button" tabindex="0" aria-label="View full size"><span class="zoom-hint" aria-hidden="true"><img src="images/icons/icon-plus-ivory-bold.png" alt=""></span><img loading="lazy" src="images/btl-emsculpt-neo-b5-lateral-abdomen-female-younghoon-cho-md.png" alt="Female lateral abdomen before EMSCULPT NEO"><span class="chip before">Before</span></div><div class="ba-img" role="button" tabindex="0" aria-label="View full size"><span class="zoom-hint" aria-hidden="true"><img src="images/icons/icon-plus-ivory-bold.png" alt=""></span><img loading="lazy" src="images/btl-emsculpt-neo-a5-lateral-abdomen-female-younghoon-cho-md.png" alt="Female lateral abdomen after EMSCULPT NEO"><span class="chip after">After</span></div></div><div class="caption"><h3>Lateral abdomen, female</h3></div></article>
+      <article class="pair"><div class="pair-imgs"><div class="ba-img" role="button" tabindex="0" aria-label="View full size"><span class="zoom-hint" aria-hidden="true"><img src="images/icons/icon-plus-ivory-bold.png" alt=""></span><img loading="lazy" src="images/btl-emsculpt-neo-b6-buttock-female-btl-aesthetics.png" alt="Female buttocks before EMSCULPT NEO"><span class="chip before">Before</span></div><div class="ba-img" role="button" tabindex="0" aria-label="View full size"><span class="zoom-hint" aria-hidden="true"><img src="images/icons/icon-plus-ivory-bold.png" alt=""></span><img loading="lazy" src="images/btl-emsculpt-neo-a6-buttock-female-btl-aesthetics.png" alt="Female buttocks after EMSCULPT NEO"><span class="chip after">After</span></div></div><div class="caption"><h3>Buttocks, female</h3></div></article>
+    </div>
+    <div class="ba-row" data-stagger>
+      <article class="pair"><div class="pair-imgs"><div class="ba-img" role="button" tabindex="0" aria-label="View full size"><span class="zoom-hint" aria-hidden="true"><img src="images/icons/icon-plus-ivory-bold.png" alt=""></span><img loading="lazy" src="images/btl-emsculpt-neo-b8-arms-male-carolyn-jacob-md.png" alt="Male arms before EMSCULPT NEO"><span class="chip before">Before</span></div><div class="ba-img" role="button" tabindex="0" aria-label="View full size"><span class="zoom-hint" aria-hidden="true"><img src="images/icons/icon-plus-ivory-bold.png" alt=""></span><img loading="lazy" src="images/btl-emsculpt-neo-a8-arms-male-carolyn-jacob-md.png" alt="Male arms after EMSCULPT NEO"><span class="chip after">After</span></div></div><div class="caption"><h3>Arms, male</h3></div></article>
+      <article class="pair"><div class="pair-imgs"><div class="ba-img" role="button" tabindex="0" aria-label="View full size"><span class="zoom-hint" aria-hidden="true"><img src="images/icons/icon-plus-ivory-bold.png" alt=""></span><img loading="lazy" src="images/btl-emsculpt-neo-b9-arms-female-btl-aesthetics.png" alt="Female arms before EMSCULPT NEO"><span class="chip before">Before</span></div><div class="ba-img" role="button" tabindex="0" aria-label="View full size"><span class="zoom-hint" aria-hidden="true"><img src="images/icons/icon-plus-ivory-bold.png" alt=""></span><img loading="lazy" src="images/btl-emsculpt-neo-a9-arms-female-btl-aesthetics.png" alt="Female arms after EMSCULPT NEO"><span class="chip after">After</span></div></div><div class="caption"><h3>Arms, female</h3></div></article>
+    </div>
+    <div class="ba-row" data-stagger>
+      <article class="pair"><div class="pair-imgs"><div class="ba-img" role="button" tabindex="0" aria-label="View full size"><span class="zoom-hint" aria-hidden="true"><img src="images/icons/icon-plus-ivory-bold.png" alt=""></span><img loading="lazy" src="images/btl-emsculpt-neo-b10-outer-thighs-female-melanie-palm-md.png" alt="Female outer thighs before EMSCULPT NEO"><span class="chip before">Before</span></div><div class="ba-img" role="button" tabindex="0" aria-label="View full size"><span class="zoom-hint" aria-hidden="true"><img src="images/icons/icon-plus-ivory-bold.png" alt=""></span><img loading="lazy" src="images/btl-emsculpt-neo-a10-outer-thighs-female-melanie-palm-md.png" alt="Female outer thighs after EMSCULPT NEO"><span class="chip after">After</span></div></div><div class="caption"><h3>Outer thighs, female</h3></div></article>
+      <article class="pair"><div class="pair-imgs"><div class="ba-img" role="button" tabindex="0" aria-label="View full size"><span class="zoom-hint" aria-hidden="true"><img src="images/icons/icon-plus-ivory-bold.png" alt=""></span><img loading="lazy" src="images/btl-emsculpt-neo-b12-calves-female-raminder-saluja-md.jpg" alt="Female calves before EMSCULPT NEO"><span class="chip before">Before</span></div><div class="ba-img" role="button" tabindex="0" aria-label="View full size"><span class="zoom-hint" aria-hidden="true"><img src="images/icons/icon-plus-ivory-bold.png" alt=""></span><img loading="lazy" src="images/btl-emsculpt-neo-a12-calves-female-raminder-saluja-md.jpg" alt="Female calves after EMSCULPT NEO"><span class="chip after">After</span></div></div><div class="caption"><h3>Calves, female</h3></div></article>
+    </div>
+  </div>
+  <p class="disclaimer" data-animate="fade-in">Results vary by patient. Photos shown are clinical results supplied by BTL and treating physicians, not Bodiatrics patients.</p>
+</section>
+
+<!-- Candidacy Quiz -->
+<section class="quiz" id="quiz" aria-labelledby="quiz-title">
+  <div class="quiz-head">
+    <h2 class="h2 dark-h2 h2-inline" id="quiz-title" data-clip><span class="line"><span>Are You a</span></span><span class="line accent"><span>Good Candidate?</span></span></h2>
+    <p data-animate="fade-up">Answer three quick questions. Most active adults near their goal weight are a strong fit.</p>
+  </div>
+  <div class="quiz-card" data-animate="fade-up">
+    <div class="progress">
+      <div class="progress-labels"><span class="step" aria-live="polite">Question 1 of 3</span><span class="time">Takes about 30 seconds</span></div>
+      <div class="track" aria-hidden="true"><i></i></div>
+    </div>
+    <div class="quiz-body"></div>
+    <div class="quiz-nav">
+      <p class="quiz-note">Your answers stay private and are only used to prepare your consultation.</p>
+      <div class="actions">
+        <button class="link-btn quiz-back" type="button" hidden>BACK</button>
+        <button class="btn btn-navy quiz-next" type="button">NEXT QUESTION</button>
+      </div>
+    </div>
+  </div>
+  <div class="exclusions" data-animate="fade-up">
+    <p class="label">Not recommended with:</p>
+    <p class="item">Metal or electronic implants in the treatment area</p>
+    <p class="item">Pacemakers or defibrillators</p>
+    <p class="item">Pregnancy</p>
+  </div>
+  <p class="ex-note" data-animate="fade-in">Some medical devices need physician clearance. Dr. Johnson reviews your history at the consultation.</p>
+</section>
+
+<!-- How the Science Works -->
+<section class="science" id="how-it-works" aria-labelledby="sci-title">
+  <div class="sci-top">
+    <h2 class="h2" id="sci-title" data-clip><span class="line"><span>Two Energies.</span></span><span class="line accent"><span>One 30 Minute Session.</span></span></h2>
+    <p data-animate="fade-up">Radiofrequency heats the fat layer so the body clears it, while HIFEM drives supramaximal contractions that build new muscle fibers. These are contractions your body cannot produce on its own, even in the gym.</p>
+  </div>
+  <div class="sci-mid">
+    <div class="mechs" data-stagger>
+      <div class="mech"><h3>Synchronized RF</h3><p>Radiofrequency raises the temperature of the fat layer. Fat cells are damaged and cleared by the body over the following weeks.</p></div>
+      <div class="mech"><h3>HIFEM+</h3><p>High intensity focused electromagnetic energy triggers supramaximal muscle contractions that build strength and new muscle fibers.</p></div>
+      <div class="callout"><div class="big" data-count="20000" data-comma>20,000</div><p>supramaximal contractions in a single session, at an intensity no voluntary workout can reach.</p><small>Based on BTL clinical data. Individual results vary.</small></div>
+    </div>
+    <div class="apps" data-stagger>
+      <article class="app"><div class="photo"><img loading="lazy" src="images/btl-emsculpt-neo-applicator-large.jpg" alt="EMSCULPT NEO large applicator"></div><div class="txt"><p class="lbl">Abdomen, buttocks and thighs</p><h3>Large applicator</h3><p>Shaped for broad muscle groups. Two can run at once so a pair of areas is treated in the same 30 minutes.</p></div></article>
+      <article class="app"><div class="photo"><img loading="lazy" src="images/btl-emsculpt-neo-applicator-small.jpg" alt="EMSCULPT NEO small applicators"></div><div class="txt"><p class="lbl">Arms and calves</p><h3>Small applicator</h3><p>Sized for smaller muscle groups like biceps, triceps and calves, so contractions stay focused on the area you chose.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- What to Expect -->
+<section class="expect" aria-labelledby="exp-title">
+  <div class="exp-top">
+    <div class="exp-left">
+      <div class="exp-header">
+        <h2 class="h2 dark-h2" id="exp-title" data-clip><span class="line"><span>How Your Results</span></span><span class="line accent"><span>Build Over Time</span></span></h2>
+        <p data-animate="fade-up">Muscle responds first, then fat clears gradually. Most patients notice progress in three stages after their final session.</p>
+      </div>
+      <div class="facts-list" data-animate="fade-up">
+        <h3>Your treatment at a glance</h3>
+        <dl>
+          <div class="frow"><dt>Session length</dt><dd>About 30 minutes</dd></div>
+          <div class="frow"><dt>Typical plan</dt><dd>About 4 sessions over two weeks</dd></div>
+          <div class="frow"><dt>Downtime</dt><dd>None. Return to your day right away</dd></div>
+          <div class="frow"><dt>How it feels</dt><dd>An intense workout with warmth</dd></div>
+          <div class="frow"><dt>Side effects</dt><dd>Mild soreness or redness for a day or two</dd></div>
+        </dl>
+        <a class="btn btn-navy" href="#book">BOOK MY $200 DEMO</a>
+      </div>
+    </div>
+    <div class="exp-img" data-img-reveal>
+      <img loading="lazy" src="images/web-emsculpt-neo-applicators-thighs.webp" alt="EMSCULPT NEO applicators strapped to a patient's buttocks and thighs">
+      <div class="img-tag"><b>Hands free, 30 minutes</b><span>Applicators on buttocks and thighs</span></div>
+    </div>
+  </div>
+  <div class="chart">
+    <div class="bars">
+      <div class="bar b1"><div class="t"><b>1 to 2 weeks</b><span>after your final session</span></div><div class="c"><h3>Early tightness</h3><p>Muscles feel firmer and more engaged, like after a hard workout.</p></div></div>
+      <div class="bar b2"><div class="t"><b>3 to 4 weeks</b><span>after your final session</span></div><div class="c"><h3>Visible change</h3><p>Definition starts to show as muscle grows and the fat layer thins.</p></div></div>
+      <div class="bar b3"><div class="t"><b>6 to 12 weeks</b><span>after your final session</span></div><div class="c"><h3>Peak results</h3><p>The full effect of new muscle and reduced fat in the treated area.</p></div></div>
+    </div>
+    <p class="chart-note">Time after your final session. Illustrative timeline, individual results vary.</p>
+  </div>
+</section>
+
+<!-- Reviews -->
+<section class="reviews" id="reviews" aria-labelledby="rev-title">
+  <h2 class="sr-only" id="rev-title">Patient reviews</h2>
+  <figure class="pull" data-animate="fade-up" style="margin:0">
+    <div class="stars" aria-label="5 out of 5 stars"><img src="images/icons/icon-star-gold.png" alt=""><img src="images/icons/icon-star-gold.png" alt=""><img src="images/icons/icon-star-gold.png" alt=""><img src="images/icons/icon-star-gold.png" alt=""><img src="images/icons/icon-star-gold.png" alt=""></div>
+    <blockquote>“If you are looking for a place that truly understands weight loss, wellness, and real support, Bodiatrics in Suwanee is it.”</blockquote>
+    <figcaption class="attrib"><i aria-hidden="true"></i>Brandy Tillery, Google review<i aria-hidden="true"></i></figcaption>
+  </figure>
+  <div class="quote-grid">
+  <div class="quote-row" data-stagger>
+    <article class="qcard"><div class="top"><div class="stars" aria-label="5 out of 5 stars"><img src="images/icons/icon-star-gold.png" alt=""><img src="images/icons/icon-star-gold.png" alt=""><img src="images/icons/icon-star-gold.png" alt=""><img src="images/icons/icon-star-gold.png" alt=""><img src="images/icons/icon-star-gold.png" alt=""></div><p>“Welcoming staff, great service, professional, responsive, and knowledgeable.”</p></div><p class="src">Leslie Davis, Google review</p></article>
+    <article class="qcard"><div class="top"><div class="stars" aria-label="5 out of 5 stars"><img src="images/icons/icon-star-gold.png" alt=""><img src="images/icons/icon-star-gold.png" alt=""><img src="images/icons/icon-star-gold.png" alt=""><img src="images/icons/icon-star-gold.png" alt=""><img src="images/icons/icon-star-gold.png" alt=""></div><p>“Highly recommend Bodiatrics!! A great place for anyone who is serious about their health and fitness goals!”</p></div><p class="src">Heather Denmark, Google review</p></article>
+    <article class="qcard"><div class="top"><div class="stars" aria-label="5 out of 5 stars"><img src="images/icons/icon-star-gold.png" alt=""><img src="images/icons/icon-star-gold.png" alt=""><img src="images/icons/icon-star-gold.png" alt=""><img src="images/icons/icon-star-gold.png" alt=""><img src="images/icons/icon-star-gold.png" alt=""></div><p>“I recently visited Bodiatrics and was blown away by their kindness and expertise.”</p></div><p class="src">Mallory, Google review</p></article>
+    <div class="gbadge">
+      <span class="lbl">Google rating</span>
+      <span class="score">5.0</span>
+      <span class="stars" aria-hidden="true"><img src="images/icons/icon-star-gold.png" alt=""><img src="images/icons/icon-star-gold.png" alt=""><img src="images/icons/icon-star-gold.png" alt=""><img src="images/icons/icon-star-gold.png" alt=""><img src="images/icons/icon-star-gold.png" alt=""></span>
+      <span class="sub2">from 9 Google reviews</span>
+    </div>
+  </div>
+  <div class="quote-row" data-stagger>
+    <article class="qcard"><div class="top"><div class="stars" aria-label="5 out of 5 stars"><img src="images/icons/icon-star-gold.png" alt=""><img src="images/icons/icon-star-gold.png" alt=""><img src="images/icons/icon-star-gold.png" alt=""><img src="images/icons/icon-star-gold.png" alt=""><img src="images/icons/icon-star-gold.png" alt=""></div><p>“Would recommend Bodiatrics clinic to anyone trying to kickstart their wellness journey and/or stay on track with their wellness journey!”</p></div><p class="src">Nazik P., Google review</p></article>
+    <article class="qcard"><div class="top"><div class="stars" aria-label="5 out of 5 stars"><img src="images/icons/icon-star-gold.png" alt=""><img src="images/icons/icon-star-gold.png" alt=""><img src="images/icons/icon-star-gold.png" alt=""><img src="images/icons/icon-star-gold.png" alt=""><img src="images/icons/icon-star-gold.png" alt=""></div><p>“I recently had the pleasure of visiting Bodiatrics wellness longevity center, and truly exceeded my expectations. From the moment I walked in, I felt a sense of calm and care.”</p></div><p class="src">Gaby Stotler, Google review</p></article>
+    <article class="qcard"><div class="top"><div class="stars" aria-label="5 out of 5 stars"><img src="images/icons/icon-star-gold.png" alt=""><img src="images/icons/icon-star-gold.png" alt=""><img src="images/icons/icon-star-gold.png" alt=""><img src="images/icons/icon-star-gold.png" alt=""><img src="images/icons/icon-star-gold.png" alt=""></div><p>“I highly recommend Bodiatrics and team! Functional, personalized medicine is the future.”</p></div><p class="src">Julie Wilderman, Google review</p></article>
+  </div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="about" id="about" aria-labelledby="about-title">
+  <div class="team-photo" data-img-reveal><img loading="lazy" src="images/gbp-emsculpt-neo-exomind-devices-team.jpg" alt="The Bodiatrics team with EMSCULPT NEO and Exomind devices"></div>
+  <div class="about-text">
+    <h2 class="h2 dark-h2" id="about-title" data-clip><span class="line"><span>A Real Clinic in Suwanee,</span></span><span class="line accent"><span>Led by a Surgeon</span></span></h2>
+    <p data-animate="fade-up">Bodiatrics is a wellness and longevity center built around the whole person. EMSCULPT NEO sits alongside DEXA body composition scans, medical weight loss, dietitian support, Exomind TMS therapy, bariatric surgery and vein treatments, so your contouring plan starts from real data about your body.</p>
+    <p data-animate="fade-up">Over 2,000 patients have trusted the team with their goals. Every EMSCULPT NEO plan begins with a one on one evaluation.</p>
+    <div class="providers" data-stagger>
+      <div class="provider"><img loading="lazy" src="images/general-dr-will-johnson-headshot.webp" alt="Dr. Will Johnson"><div><h3>Dr. Will Johnson, MD, FACS</h3><p>Board certified bariatric and vein surgeon. Duke trained, 20+ years of experience, Medical Director of the Vein Center at Johns Creek.</p></div></div>
+      <div class="provider"><img loading="lazy" src="images/general-wyndee-johnson-headshot.webp" alt="Wyndee Johnson"><div><h3>Wyndee Johnson, FMCHC</h3><p>Functional Medicine Certified Health Coach supporting the nutrition and lifestyle side of your plan.</p></div></div>
+    </div>
+    <div class="cta-row" data-animate="fade-up">
+      <a class="btn btn-navy" href="#book">BOOK FREE CONSULTATION</a>
+      <a class="btn btn-slate" href="tel:+14783304146">CALL (478) 330-4146</a>
+    </div>
+  </div>
+</section>
+
+<!-- Lead Form -->
+<section class="lead" id="book" aria-labelledby="book-title">
+  <div class="offer">
+    <h2 class="h2" id="book-title" data-clip><span class="line"><span>Claim Your $200 Demo</span></span><span class="line accent"><span>and Free Consultation</span></span></h2>
+    <p data-animate="fade-up">Feel the contractions for yourself before committing to a plan. Your consultation is free and includes a review of your goals and a personalized treatment plan.</p>
+    <ul class="checklist" data-stagger>
+      <li><img src="images/icons/icon-check-gold.png" alt="">A $200 Mini Demo Session of EMSCULPT NEO</li>
+      <li><img src="images/icons/icon-check-gold.png" alt="">Free consultation with Dr. Johnson's team</li>
+      <li><img src="images/icons/icon-check-gold.png" alt="">Body composition and goals review</li>
+      <li><img src="images/icons/icon-check-gold.png" alt="">Personalized treatment plan with pricing</li>
+      <li><img src="images/icons/icon-check-gold.png" alt="">Financing through Cherry and CareCredit</li>
+    </ul>
+    <a class="prefer" href="tel:+14783304146" data-animate="fade-up"><img src="images/icons/icon-call-gold.svg" alt="">Prefer to talk? Call (478) 330-4146</a>
+  </div>
+  <div class="form-panel" data-animate="fade-up">
+    <form class="lead-form" novalidate>
+      <div style="display:flex;flex-direction:column;gap:20px">
+        <h3>Book your demo</h3>
+        <p class="fsub">Takes under a minute. Our team calls to confirm your appointment time.</p>
+        <div class="frow2">
+          <div class="field"><label for="fn">First name</label><input id="fn" name="first_name" type="text" autocomplete="given-name" placeholder="First name" required><span class="msg">Please enter your first name.</span></div>
+          <div class="field"><label for="ln">Last name</label><input id="ln" name="last_name" type="text" autocomplete="family-name" placeholder="Last name" required><span class="msg">Please enter your last name.</span></div>
+        </div>
+        <div class="frow2">
+          <div class="field"><label for="ph">Phone</label><input id="ph" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(555) 555-0123" required><span class="msg">Please enter a valid phone number.</span></div>
+          <div class="field"><label for="em">Email</label><input id="em" name="email" type="email" autocomplete="email" placeholder="you@email.com" required><span class="msg">Please enter a valid email.</span></div>
+        </div>
+        <div class="field"><label for="area">What would you like to improve?</label><input id="area" name="area" type="text" autocomplete="off" placeholder="Abdomen, buttocks, thighs, arms, calves..." required><span class="msg">Please tell us what you would like to improve.</span></div>
+        <input type="hidden" name="quiz" value="">
+        <button class="btn btn-navy submit" type="submit"><span class="label">BOOK MY $200 DEMO</span><span class="spinner" aria-hidden="true"></span></button>
+        <label class="consent"><input type="checkbox" name="consent" required><span>By submitting, you agree to be contacted by Bodiatrics by phone, text or email about your appointment. Message and data rates may apply. Reply STOP to opt out.</span></label>
+        <p class="form-disc">New patients only. Results vary. Pricing for full treatment plans is reviewed at your consultation.</p>
+      </div>
+    </form>
+    <div class="form-success" role="status" aria-live="polite">
+      <h3>Thank you, you're all set.</h3>
+      <p>Our team will call you shortly to confirm your $200 Mini Demo Session and free consultation. Need us sooner? Call <a href="tel:+14783304146" style="text-decoration:underline">(478) 330-4146</a>, Monday to Friday, 8:00 AM to 4:30 PM.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Location -->
+<section class="location" id="location" aria-labelledby="loc-title">
+  <div class="loc-info">
+    <h2 class="h2 dark-h2" id="loc-title" data-clip><span class="line"><span>Visit Us in</span></span><span class="line accent"><span>Suwanee, Georgia</span></span></h2>
+    <div class="info-grid" data-stagger>
+      <div class="info"><img src="images/icons/icon-pin-navy-bold.png" alt=""><div><span class="k">Address</span><span class="v">6920 McGinnis Ferry Rd, Suite 340, Suwanee, GA 30024</span></div></div>
+      <div class="info"><img src="images/icons/icon-clock-navy-bold.png" alt=""><div><span class="k">Hours</span><span class="v">Monday to Friday, 8:00 AM to 4:30 PM. Saturday and Sunday closed.</span></div></div>
+      <div class="info"><img src="images/icons/icon-call-navy.svg" alt=""><div><span class="k">Phone</span><span class="v"><a href="tel:+14783304146">(478) 330-4146</a></span></div></div>
+      <div class="info"><img src="images/icons/icon-mail-navy.svg" alt=""><div><span class="k">Email</span><span class="v"><a href="mailto:info@bodiatrics.com">info@bodiatrics.com</a></span></div></div>
+    </div>
+    <p class="serving" data-animate="fade-up">Serving Suwanee, Johns Creek, Alpharetta, Duluth, Cumming and Metro Atlanta.</p>
+    <div class="cta-row" data-animate="fade-up">
+      <a class="btn btn-navy" href="https://www.google.com/maps/dir/?api=1&amp;destination=Bodiatrics%2C%206920%20McGinnis%20Ferry%20Rd%20Suite%20340%2C%20Suwanee%2C%20GA%2030024&amp;destination_place_id=ChIJKw7fUOaZ9YgRcs5aucQxxE4" target="_blank" rel="noopener">GET DIRECTIONS<span class="ico-swap"><img src="images/icons/icon-arrow-ne-ivory-bold.png" alt=""><img class="alt" src="images/icons/icon-arrow-ne-navy-bold.png" alt=""></span></a>
+      <a class="btn btn-steel" href="tel:+14783304146"><img src="images/icons/icon-call-navy.svg" alt="">CALL (478) 330-4146</a>
+    </div>
+  </div>
+  <div class="map" data-img-reveal>
+    <iframe title="Map to Bodiatrics, 6920 McGinnis Ferry Rd Suite 340, Suwanee, GA" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen
+      src="https://maps.google.com/maps?q=Bodiatrics%2C%206920%20McGinnis%20Ferry%20Rd%20Suite%20340%2C%20Suwanee%2C%20GA%2030024&amp;z=15&amp;output=embed"></iframe>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq" aria-labelledby="faq-title">
+  <h2 class="h2 dark-h2 h2-inline" id="faq-title" data-clip><span class="line"><span>Frequently Asked</span></span><span class="line accent"><span>Questions</span></span></h2>
+  <div class="faq-list" data-stagger>
+    <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false"><span>How much does EMSCULPT NEO cost?</span><i class="ico" aria-hidden="true"><img class="plus" src="images/icons/icon-faq-plus-navy.png" alt=""><img class="minus" src="images/icons/icon-faq-minus-gold.png" alt=""></i></button><div class="faq-a"><p>Cost depends on the number of areas and sessions. Most patients do a series of about four sessions, priced as a plan at your consultation. We offer self pay and financing through Cherry and CareCredit. The $200 Mini Demo lets you try it first.</p></div></div>
+    <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false"><span>How long does each session take?</span><i class="ico" aria-hidden="true"><img class="plus" src="images/icons/icon-faq-plus-navy.png" alt=""><img class="minus" src="images/icons/icon-faq-minus-gold.png" alt=""></i></button><div class="faq-a"><p>About 30 minutes. You relax on the treatment bed while the applicators do the work, and there is no downtime, so you can go straight back to your day.</p></div></div>
+    <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false"><span>Is EMSCULPT NEO painful?</span><i class="ico" aria-hidden="true"><img class="plus" src="images/icons/icon-faq-plus-navy.png" alt=""><img class="minus" src="images/icons/icon-faq-minus-gold.png" alt=""></i></button><div class="faq-a"><p>Most patients describe it as an intense workout with a warming sensation. The intensity is adjusted to your comfort throughout the session. Some people feel mild muscle soreness for a day or two afterward.</p></div></div>
+    <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false"><span>When will I see results?</span><i class="ico" aria-hidden="true"><img class="plus" src="images/icons/icon-faq-plus-navy.png" alt=""><img class="minus" src="images/icons/icon-faq-minus-gold.png" alt=""></i></button><div class="faq-a"><p>Many patients feel firmer muscles one to two weeks after their final session. Visible change usually shows at three to four weeks, and peak results arrive around six to twelve weeks as new muscle builds and fat clears.</p></div></div>
+    <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false"><span>How many sessions do I need?</span><i class="ico" aria-hidden="true"><img class="plus" src="images/icons/icon-faq-plus-navy.png" alt=""><img class="minus" src="images/icons/icon-faq-minus-gold.png" alt=""></i></button><div class="faq-a"><p>Most plans are about four sessions spread over roughly two weeks. Dr. Johnson's team recommends the right number for your goals and body composition at your consultation.</p></div></div>
+    <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false"><span>Is it a weight loss treatment?</span><i class="ico" aria-hidden="true"><img class="plus" src="images/icons/icon-faq-plus-navy.png" alt=""><img class="minus" src="images/icons/icon-faq-minus-gold.png" alt=""></i></button><div class="faq-a"><p>No. EMSCULPT NEO is a body contouring treatment that builds muscle and reduces fat in a specific area. It works best for people at or near their goal weight. If you have more to lose, our medical weight loss program can be the first step.</p></div></div>
+    <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false"><span>How is it different from fat only treatments?</span><i class="ico" aria-hidden="true"><img class="plus" src="images/icons/icon-faq-plus-navy.png" alt=""><img class="minus" src="images/icons/icon-faq-minus-gold.png" alt=""></i></button><div class="faq-a"><p>Fat only treatments reduce fat but do nothing for the muscle underneath. EMSCULPT NEO does both in the same session, with an average of 25% more muscle and 30% less fat in the treated area based on BTL clinical data.</p></div></div>
+    <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false"><span>Is it safe?</span><i class="ico" aria-hidden="true"><img class="plus" src="images/icons/icon-faq-plus-navy.png" alt=""><img class="minus" src="images/icons/icon-faq-minus-gold.png" alt=""></i></button><div class="faq-a"><p>EMSCULPT NEO is FDA cleared and noninvasive, with no needles, incisions or anesthesia. It is not recommended with metal or electronic implants in the treatment area, pacemakers or during pregnancy, and Dr. Johnson reviews your medical history before treatment.</p></div></div>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="final" aria-labelledby="final-title">
+  <div class="bg" data-parallax="0.35" aria-hidden="true"></div>
+  <h2 class="h2" id="final-title" data-clip><span class="line"><span>Ready to Feel Your</span></span><span class="line accent"><span>Muscles Work Again?</span></span></h2>
+  <p data-animate="fade-up">Book a $200 mini demo session and a free consultation with Dr. Johnson's team in Suwanee. No downtime, about 30 minutes.</p>
+  <div class="cta-row" data-animate="fade-up">
+    <a class="btn btn-ivory" href="#book">BOOK MY $200 DEMO</a>
+    <a class="btn btn-ghost solid-border" href="tel:+14783304146"><img src="images/icons/icon-call-ivory.svg" alt="">CALL (478) 330-4146</a>
+  </div>
+  <p class="small" data-animate="fade-in">New patients only. Results vary.</p>
+</section>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="foot-cols">
+    <div class="fcol brand">
+      <a class="foot-logo" href="#top" aria-label="Back to top"><img src="images/general-bodiatrics-logo-reversed.png" alt="Bodiatrics Wellness Longevity Center" loading="lazy"></a>
+      <p class="tagline">Optimize Your Body.<br>Master Your Mind.</p>
+    </div>
+    <div class="fcol w">
+      <h3>Visit Bodiatrics</h3>
+      <a class="ci" href="https://www.google.com/maps/place/?q=place_id:ChIJKw7fUOaZ9YgRcs5aucQxxE4" target="_blank" rel="noopener"><img src="images/icons/icon-pin-gold-bold.png" alt=""><span>6920 McGinnis Ferry Rd, Suite 340<br>Suwanee, GA 30024</span></a>
+      <a class="ci" href="tel:+14783304146"><img src="images/icons/icon-call-gold.svg" alt=""><span>(478) 330-4146</span></a>
+      <div class="ci"><img src="images/icons/icon-clock-gold-bold.png" alt=""><span>Mon to Fri, 8:00 AM to 4:30 PM</span></div>
+      <a class="ci" href="mailto:info@bodiatrics.com"><img src="images/icons/icon-mail-gold.svg" alt=""><span>info@bodiatrics.com</span></a>
+      <p class="area">Serving Suwanee, Johns Creek, Alpharetta, Duluth, Cumming and Metro Atlanta.</p>
+    </div>
+    <div class="fcol w">
+      <h3>On This Page</h3>
+      <a class="fl" href="#results">Real results</a>
+      <a class="fl" href="#how-it-works">How it works</a>
+      <a class="fl" href="#reviews">Reviews</a>
+      <a class="fl" href="#book">Book your $200 demo</a>
+      <a class="fl" href="#faq">FAQ</a>
+    </div>
+    <div class="fcol follow">
+      <h3>Follow Us</h3>
+      <div class="socials">
+        <a class="social" href="https://instagram.com/BodiatricsMD" target="_blank" rel="noopener" aria-label="Bodiatrics on Instagram"><img src="images/icons/icon-instagram-gold.png" alt=""></a>
+        <a class="social" href="https://www.facebook.com/profile.php?id=61577201803013" target="_blank" rel="noopener" aria-label="Bodiatrics on Facebook"><img src="images/icons/icon-facebook-gold.png" alt=""></a>
+      </div>
+    </div>
+  </div>
+  <div class="foot-bottom">Copyright 2026 Bodiatrics. All rights reserved.</div>
+</footer>
+
+<div class="lightbox" role="dialog" aria-modal="true" aria-label="Before and after photo viewer">
+  <div class="lb-backdrop"></div>
+  <figure class="lb-panel"><img class="lb-img" src="" alt=""><figcaption class="lb-cap"><span class="chip"></span><b></b><span class="count"></span></figcaption></figure>
+  <button class="lb-btn lb-close" type="button" aria-label="Close"><img src="images/icons/icon-plus-ivory-bold.png" alt=""></button>
+  <button class="lb-btn lb-prev" type="button" aria-label="Previous photo"><img src="images/icons/icon-chevron-down-ivory-bold.png" alt=""></button>
+  <button class="lb-btn lb-next" type="button" aria-label="Next photo"><img src="images/icons/icon-chevron-down-ivory-bold.png" alt=""></button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.23/dist/lenis.min.js"></script>
+<script>
+(() => {
+  /* ---------- Safety net: if GSAP failed to load, show everything ---------- */
+  if (!window.gsap) { document.documentElement.classList.remove("js-anim"); return; }
+  gsap.registerPlugin(ScrollTrigger);
+
+  const REDUCED = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const MOBILE  = matchMedia("(max-width: 768px)").matches;
+  const TOUCH   = "ontouchstart" in window || navigator.maxTouchPoints > 0;
+  const LOW_END = MOBILE && (navigator.hardwareConcurrency || 8) <= 4;
+  const HERO_BG = matchMedia("(max-width: 899px)").matches;   // hero video used as full-bleed backdrop
+  const Q = "power4.out";               // cubic-bezier(.22,1,.36,1)
+  gsap.config({ nullTargetWarn: false });
+  gsap.defaults({ ease: "power3.out", duration: LOW_END ? 0.4 : 0.6 });
+
+  /* ---------- Lenis smooth scroll (desktop pointer only) ---------- */
+  let lenis = null;
+  if (!REDUCED && !TOUCH && window.Lenis) {
+    lenis = new Lenis({ duration: 1.2, easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smoothWheel: true, touchMultiplier: 2 });
+    lenis.on("scroll", ScrollTrigger.update);
+    gsap.ticker.add(time => lenis.raf(time * 1000));
+    gsap.ticker.lagSmoothing(0);
+    document.addEventListener("visibilitychange", () => document.hidden ? lenis.stop() : lenis.start());
+  }
+  const headerH = () => document.querySelector(".site-header").offsetHeight;
+  const scrollToEl = el => {
+    if (lenis) lenis.scrollTo(el, { offset: -headerH() });
+    else window.scrollTo({ top: el.getBoundingClientRect().top + scrollY - headerH(), behavior: REDUCED ? "auto" : "smooth" });
+  };
+  document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener("click", e => {
+    const id = a.getAttribute("href"); if (id.length < 2 && id !== "#top") return;
+    const el = id === "#top" ? document.body : document.querySelector(id); if (!el) return;
+    e.preventDefault(); closeMenu(); scrollToEl(el);
+  }));
+
+  /* ---------- Mobile menu ---------- */
+  const menuBtn = document.querySelector(".menu-btn"), mnav = document.querySelector(".mobile-nav");
+  let menuOpen = false;
+  function closeMenu() {
+    if (!menuOpen) return; menuOpen = false; menuBtn.setAttribute("aria-expanded", "false");
+    gsap.to(mnav, { autoAlpha: 0, y: -10, duration: 0.25, ease: "power2.out" });
+    gsap.to(menuBtn.children, { rotation: 0, y: 0, autoAlpha: 1, duration: 0.3, ease: "back.inOut(1.7)" });
+  }
+  menuBtn.addEventListener("click", () => {
+    if (menuOpen) return closeMenu();
+    menuOpen = true; menuBtn.setAttribute("aria-expanded", "true");
+    gsap.fromTo(mnav, { autoAlpha: 0, y: -10 }, { autoAlpha: 1, y: 0, duration: 0.3, ease: "power2.out" });
+    const [a, b, c] = menuBtn.children;
+    gsap.to(a, { y: 6.5, rotation: 45, duration: 0.3, ease: "back.inOut(1.7)" });
+    gsap.to(b, { autoAlpha: 0, duration: 0.15 });
+    gsap.to(c, { y: -6.5, rotation: -45, duration: 0.3, ease: "back.inOut(1.7)" });
+  });
+
+  /* ---------- Hover on desktop, tap on tablet and mobile ----------
+     Desktop with a mouse: effects run on mouseenter / mouseleave exactly as designed.
+     Tablet and mobile view (touch input or viewport up to 1199px): the same effect runs on click.
+       "toggle": tap turns it on, tap again or tap anywhere else turns it off (cards, rows, bars)
+       "flash":  tap plays it briefly, for links and buttons that navigate
+       "hover":  desktop only, where the tap already has its own feedback */
+  const TAP_MQ = matchMedia("(hover: none), (pointer: coarse), (max-width: 1199px)");
+  const tapMode = () => TAP_MQ.matches;
+  let activeTap = null;
+  const releaseTap = () => { if (!activeTap) return; const a = activeTap; activeTap = null; a.off(); };
+  document.addEventListener("click", e => { if (activeTap && !activeTap.el.contains(e.target)) releaseTap(); }, true);
+  TAP_MQ.addEventListener && TAP_MQ.addEventListener("change", releaseTap);
+  const hoverFx = (el, on, off, mode = "toggle") => {
+    el.addEventListener("mouseenter", () => { if (!tapMode()) on(); });
+    el.addEventListener("mouseleave", () => { if (!tapMode()) off(); });
+    if (mode === "hover") return;
+    el.addEventListener("click", () => {
+      if (!tapMode()) return;
+      if (mode === "flash") { clearTimeout(el._fxT); on(); el._fxT = setTimeout(off, 650); return; }
+      if (activeTap && activeTap.el === el) return releaseTap();
+      releaseTap(); on(); activeTap = { el, off };
+    });
+  };
+
+  /* ---------- Button hover: color inversion, no transform (brand rule) ---------- */
+  const T = { duration: 0.3, ease: "power2.out", overwrite: "auto" };
+  const VARIANTS = [
+    [".btn-navy",  { backgroundColor: "rgba(23,42,70,1)", color: "#F6F3EC", borderColor: "#172A46" },   { backgroundColor: "rgba(23,42,70,0)", color: "#172A46", borderColor: "#172A46" }],
+    [".btn-ivory", { backgroundColor: "rgba(246,243,236,1)", color: "#172A46", borderColor: "#F6F3EC" }, { backgroundColor: "rgba(246,243,236,0)", color: "#F6F3EC", borderColor: "#F6F3EC" }],
+    [".btn-ghost", { backgroundColor: "rgba(255,255,255,0)" },                                           { backgroundColor: "rgba(255,255,255,0.14)" }],
+    [".btn-gold",  { backgroundColor: "rgba(184,154,98,0)", color: "#CBB17F" },                          { backgroundColor: "rgba(184,154,98,1)", color: "#0F1D33" }],
+    [".btn-steel", { backgroundColor: "rgba(143,168,178,1)", color: "#172A46", borderColor: "#8FA8B2" }, { backgroundColor: "rgba(143,168,178,0)", color: "#172A46", borderColor: "#8FA8B2" }],
+    [".btn-slate", { backgroundColor: "rgba(94,122,134,1)", color: "#FFFFFF", borderColor: "#5E7A86" },  { backgroundColor: "rgba(94,122,134,0)", color: "#5E7A86", borderColor: "#5E7A86" }]
+  ];
+  VARIANTS.forEach(([sel, rest, hover]) => document.querySelectorAll(sel).forEach(btn => {
+    if (btn.classList.contains("submit")) return;
+    const alt = btn.querySelector(".ico-swap .alt"), base = btn.querySelector(".ico-swap img:not(.alt)");
+    const on  = () => { gsap.to(btn, { ...hover, ...T }); alt && gsap.to(alt, { opacity: 1, ...T }); base && gsap.to(base, { opacity: 0, ...T }); };
+    const off = () => { gsap.to(btn, { ...rest,  ...T }); alt && gsap.to(alt, { opacity: 0, ...T }); base && gsap.to(base, { opacity: 1, ...T }); };
+    hoverFx(btn, on, off, "flash");
+    btn.addEventListener("focus", () => btn.matches(":focus-visible") && on()); btn.addEventListener("blur", off);
+  }));
+  // Press feedback (fallback: site has no :active state)
+  if (!REDUCED) document.querySelectorAll(".btn, .answer, .lb-btn").forEach(btn => {
+    btn.addEventListener("pointerdown", () => gsap.to(btn, { scale: 0.98, duration: 0.1, ease: "power2.out" }));
+    ["pointerup", "pointerleave", "pointercancel"].forEach(ev => btn.addEventListener(ev, () => gsap.to(btn, { scale: 1, duration: 0.1, ease: "power2.out" })));
+  });
+
+  /* ---------- Link hovers (150ms color shifts) ---------- */
+  const fast = { duration: 0.15, ease: "power2.out", overwrite: "auto" };
+  const colorHover = (sel, to, from) => document.querySelectorAll(sel).forEach(el =>
+    hoverFx(el, () => gsap.to(el, { color: to, ...fast }), () => gsap.to(el, { color: from, ...fast }), "flash"));
+  colorHover(".nav a, .mobile-nav a:not(.btn)", "#CBB17F", "rgba(246,243,236,0.85)");
+  colorHover(".header-phone, .prefer", "#CBB17F", "#F6F3EC");
+  colorHover(".fcol .fl", "#B89A62", "rgba(246,243,236,0.85)");
+  colorHover(".fcol a.ci", "#B89A62", "#F6F3EC");
+  document.querySelectorAll(".logo").forEach(l =>
+    hoverFx(l, () => gsap.to(l, { scale: 1.02, ...fast }), () => gsap.to(l, { scale: 1, ...fast }), "flash"));
+  document.querySelectorAll(".social").forEach(s =>
+    hoverFx(s, () => gsap.to(s, { backgroundColor: "rgba(184,154,98,0.18)", ...fast }), () => gsap.to(s, { backgroundColor: "rgba(184,154,98,0)", ...fast }), "flash"));
+  // Underline wipe on inline contact links and redraw on underlined text links
+  document.querySelectorAll(".info .v a").forEach(a => hoverFx(a,
+    () => gsap.to(a, { backgroundSize: "100% 1px", color: "#8A6F3E", duration: 0.3, ease: "power2.inOut", overwrite: "auto" }),
+    () => gsap.to(a, { backgroundSize: "0% 1px", color: "#2D3136", duration: 0.3, ease: "power2.inOut", overwrite: "auto" }), "flash"));
+  const redraw = a => gsap.timeline({ overwrite: true })
+    .set(a, { backgroundPosition: "100% 100%" })
+    .to(a, { backgroundSize: "0% 1px", duration: 0.234, ease: "power2.out" })
+    .set(a, { backgroundPosition: "0% 100%" }, "+=0.052")
+    .to(a, { backgroundSize: "100% 1px", duration: 0.234, ease: "power2.out" });
+  if (!REDUCED) document.querySelectorAll(".link-btn").forEach(a => hoverFx(a, () => redraw(a), () => {}, "flash"));
+
+  /* ---------- Card hovers: slow image zoom inside clipped frames ---------- */
+  const zoomOn = (card, imgs, z) => hoverFx(card,
+    () => !REDUCED && gsap.to(imgs, { scale: z, duration: 0.5, ease: "power2.out", overwrite: "auto" }),
+    () => gsap.to(imgs, { scale: 1, duration: 0.5, ease: "power2.out", overwrite: "auto" }));
+  document.querySelectorAll(".pair").forEach(p => zoomOn(p, p.querySelectorAll(".ba-img > img"), 1.04));
+  document.querySelectorAll(".app").forEach(p => zoomOn(p, p.querySelector(".photo img"), 1.05));
+  document.querySelectorAll(".exp-img, .team-photo").forEach(p => zoomOn(p, p.querySelector("img"), 1.04));
+  /* Review cards: strong hover, lift and invert to navy */
+  document.querySelectorAll(".qcard").forEach(c => {
+    const txt = c.querySelector(".top p"), src = c.querySelector(".src"), stars = c.querySelectorAll(".stars img");
+    gsap.set(c, { boxShadow: "0 24px 48px rgba(15,29,51,0)" });
+    const d = { duration: 0.4, ease: "power3.out", overwrite: "auto" };
+    hoverFx(c, () => {
+      gsap.to(c, { y: REDUCED ? 0 : -10, backgroundColor: "#172A46", boxShadow: "0 24px 48px rgba(15,29,51,0.28)", ...d });
+      gsap.to(txt, { color: "#F6F3EC", ...d }); gsap.to(src, { color: "#CBB17F", ...d });
+      if (!REDUCED) gsap.fromTo(stars, { scale: 0.6 }, { scale: 1, duration: 0.45, ease: "back.out(2.5)", stagger: 0.04, overwrite: "auto" });
+    }, () => {
+      gsap.to(c, { y: 0, backgroundColor: "#FFFFFF", boxShadow: "0 24px 48px rgba(15,29,51,0)", ...d });
+      gsap.to(txt, { color: "#2D3136", ...d }); gsap.to(src, { color: "rgba(45,49,54,0.62)", ...d });
+    });
+  });
+
+  /* Treatment at a glance rows */
+  document.querySelectorAll(".frow").forEach(r => {
+    const dt = r.querySelector("dt"), dd = r.querySelector("dd");
+    const d = { duration: 0.3, ease: "power2.out", overwrite: "auto" };
+    hoverFx(r, () => { gsap.to(r, { backgroundColor: "rgba(237,232,222,1)", paddingLeft: 16, paddingRight: 16, ...d }); gsap.to(dt, { color: "#8A6F3E", ...d }); gsap.to(dd, { color: "#172A46", ...d }); },
+      () => { gsap.to(r, { backgroundColor: "rgba(237,232,222,0)", paddingLeft: 0, paddingRight: 0, ...d }); gsap.to(dt, { color: "rgba(45,49,54,0.7)", ...d }); gsap.to(dd, { color: "#2D3136", ...d }); });
+  });
+
+  /* Offer checklist and call line left of the form */
+  document.querySelectorAll(".checklist li").forEach(li => {
+    const ic = li.querySelector("img"), d = { duration: 0.3, ease: "power2.out", overwrite: "auto" };
+    hoverFx(li, () => { gsap.to(li, { backgroundColor: "rgba(246,243,236,0.06)", paddingLeft: 16, color: "#CBB17F", ...d }); if (!REDUCED) gsap.fromTo(ic, { scale: 0.7, rotation: -12 }, { scale: 1.15, rotation: 0, duration: 0.4, ease: "back.out(2.5)", overwrite: "auto" }); },
+      () => { gsap.to(li, { backgroundColor: "rgba(246,243,236,0)", paddingLeft: 0, color: "#F6F3EC", ...d }); gsap.to(ic, { scale: 1, ...d }); });
+  });
+  document.querySelectorAll(".prefer").forEach(p => {
+    const ic = p.querySelector("img");
+    hoverFx(p, () => { if (!REDUCED) gsap.fromTo(ic, { rotation: 0 }, { keyframes: { rotation: [0, -14, 12, -8, 0] }, duration: 0.5, ease: "power1.inOut" }); }, () => {}, "flash");
+  });
+
+  /* Results chart bars */
+  const barEls = [...document.querySelectorAll(".bar")];
+  const barsWrap = document.querySelector(".bars");
+  const desktopBars = () => true;   // bars are vertical at every size now
+  barEls.forEach(bar => hoverFx(bar, () => {
+      if (!desktopBars() && !tapMode()) return;
+      barEls.forEach(o => gsap.to(o, { opacity: o === bar ? 1 : 0.45, duration: 0.3, ease: "power2.out", overwrite: "auto" }));
+      gsap.to(bar.querySelector(".t b"), { x: REDUCED ? 0 : 6, duration: 0.3, ease: "power2.out", overwrite: "auto" });
+      if (!desktopBars()) return;               // stacked bars on mobile: highlight only, no growth
+      if (!bar.dataset.h) bar.dataset.h = bar.offsetHeight;
+      if (!REDUCED) gsap.to(bar, { height: +bar.dataset.h + 24, duration: 0.45, ease: "power3.out" });
+    }, () => {
+      gsap.to(bar.querySelector(".t b"), { x: 0, duration: 0.3, ease: "power2.out", overwrite: "auto" });
+      if (tapMode()) barEls.forEach(o => gsap.to(o, { opacity: 1, duration: 0.3, ease: "power2.out" }));
+      if (desktopBars() && bar.dataset.h) gsap.to(bar, { height: +bar.dataset.h, duration: 0.45, ease: "power3.out", onComplete: () => { gsap.set(bar, { clearProps: "height" }); delete bar.dataset.h; } });
+    }));
+  if (barsWrap) barsWrap.addEventListener("mouseleave", () => { if (!tapMode()) barEls.forEach(o => gsap.to(o, { opacity: 1, duration: 0.3, ease: "power2.out" })); });
+
+  /* Footer logo glow */
+  document.querySelectorAll(".foot-logo img").forEach(img => {
+    gsap.set(img, { filter: "drop-shadow(0px 0px 0px rgba(203,177,127,0)) brightness(1)" });
+    const a = img.parentElement;
+    hoverFx(a, () => gsap.to(img, { filter: "drop-shadow(0px 0px 14px rgba(203,177,127,0.75)) brightness(1.12)", duration: 0.4, ease: "power2.out", overwrite: "auto" }),
+      () => gsap.to(img, { filter: "drop-shadow(0px 0px 0px rgba(203,177,127,0)) brightness(1)", duration: 0.4, ease: "power2.out", overwrite: "auto" }), "flash");
+  });
+
+  /* ---------- Before and after lightbox ---------- */
+  (() => {
+    const lb = document.querySelector(".lightbox"), bd = lb.querySelector(".lb-backdrop"), panel = lb.querySelector(".lb-panel");
+    const lbImg = lb.querySelector(".lb-img"), chip = lb.querySelector(".lb-cap .chip"), title = lb.querySelector(".lb-cap b"), count = lb.querySelector(".lb-cap .count");
+    const shots = [...document.querySelectorAll(".ba-img")];
+    const data = shots.map(el => { const img = el.querySelector(":scope > img");
+      return { src: img.getAttribute("src"), alt: img.alt, after: !!el.querySelector(".chip.after"), title: el.closest(".pair").querySelector(".caption h3").textContent }; });
+    let idx = 0, lastFocus = null, open = false;
+    const apply = d => { lbImg.src = d.src; lbImg.alt = d.alt; chip.textContent = d.after ? "After" : "Before"; chip.className = "chip " + (d.after ? "after" : "before");
+      title.textContent = d.title; count.textContent = `${idx + 1} of ${data.length}`; };
+    const show = (i, dir) => {
+      idx = (i + data.length) % data.length; const d = data[idx];
+      if (!dir || REDUCED) { apply(d); return; }
+      gsap.to(lbImg, { autoAlpha: 0, x: -24 * dir, duration: 0.18, ease: "power2.in", overwrite: true, onComplete: () => { apply(d); gsap.fromTo(lbImg, { autoAlpha: 0, x: 24 * dir }, { autoAlpha: 1, x: 0, duration: 0.3, ease: "power3.out" }); } });
+    };
+    const openLb = i => {
+      lastFocus = document.activeElement; open = true; show(i); gsap.set(lbImg, { autoAlpha: 1, x: 0 });
+      lb.classList.add("is-open"); document.documentElement.style.overflow = "hidden"; if (lenis) lenis.stop();
+      if (!REDUCED) {
+        gsap.fromTo(bd, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.25, ease: "power2.out" });
+        gsap.fromTo(panel, { autoAlpha: 0, y: 24, scale: 0.97 }, { autoAlpha: 1, y: 0, scale: 1, duration: 0.4, ease: "power3.out", delay: 0.05 });
+        gsap.fromTo(lb.querySelectorAll(".lb-btn"), { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.3, delay: 0.15 });
+      } else gsap.set([bd, panel, ...lb.querySelectorAll(".lb-btn")], { autoAlpha: 1 });
+      lb.querySelector(".lb-close").focus({ preventScroll: true });
+    };
+    const closeLb = () => {
+      if (!open) return; open = false;
+      const done = () => { lb.classList.remove("is-open"); document.documentElement.style.overflow = ""; if (lenis) lenis.start(); if (lastFocus) lastFocus.focus({ preventScroll: true }); };
+      if (REDUCED) return done();
+      gsap.to(panel, { autoAlpha: 0, y: 12, duration: 0.2, ease: "power2.in" });
+      gsap.to(bd, { autoAlpha: 0, duration: 0.2, ease: "power2.in", onComplete: done });
+    };
+    shots.forEach((el, i) => {
+      el.addEventListener("click", () => openLb(i));
+      el.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openLb(i); } });
+      const hint = el.querySelector(".zoom-hint");
+      // Tap view shows the hint permanently (CSS), so this stays a desktop hover
+      hoverFx(el, () => gsap.to(hint, { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out", overwrite: "auto" }),
+        () => gsap.to(hint, { opacity: 0, scale: 0.8, duration: 0.25, ease: "power2.out", overwrite: "auto" }), "hover");
+    });
+    lb.querySelector(".lb-close").addEventListener("click", closeLb);
+    bd.addEventListener("click", closeLb);
+    lb.querySelector(".lb-prev").addEventListener("click", () => show(idx - 1, -1));
+    lb.querySelector(".lb-next").addEventListener("click", () => show(idx + 1, 1));
+    document.addEventListener("keydown", e => { if (!open) return;
+      if (e.key === "Escape") closeLb(); else if (e.key === "ArrowRight") show(idx + 1, 1); else if (e.key === "ArrowLeft") show(idx - 1, -1); });
+    let sx = null;
+    lb.addEventListener("touchstart", e => { sx = e.touches[0].clientX; }, { passive: true });
+    lb.addEventListener("touchend", e => { if (sx === null) return; const dx = e.changedTouches[0].clientX - sx; if (Math.abs(dx) > 50) show(idx + (dx < 0 ? 1 : -1), dx < 0 ? 1 : -1); sx = null; });
+    lb.querySelectorAll(".lb-btn").forEach(b => {
+      hoverFx(b, () => gsap.to(b, { backgroundColor: "rgba(246,243,236,0.14)", duration: 0.3, ease: "power2.out" }),
+        () => gsap.to(b, { backgroundColor: "rgba(246,243,236,0)", duration: 0.3, ease: "power2.out" }), "flash");
+    });
+  })();
+
+  /* ---------- Hero video: autoplay, muted, infinite loop ---------- */
+  const video = document.querySelector(".hero-video");
+  if (video) {
+    video.muted = true; video.defaultMuted = true; video.loop = true;
+    const tryPlay = () => { const p = video.play(); if (p && p.catch) p.catch(() => {}); };
+    tryPlay();
+    document.addEventListener("visibilitychange", () => { if (!document.hidden) tryPlay(); });
+    ["touchstart", "pointerdown"].forEach(ev => window.addEventListener(ev, tryPlay, { once: true, passive: true }));
+  }
+
+  /* ---------- FAQ accordion (single open) ---------- */
+  const items = [...document.querySelectorAll(".faq-item")];
+  const setItem = (it, open, instant) => {
+    const a = it.querySelector(".faq-a"), q = it.querySelector(".faq-q"), txt = q.querySelector("span");
+    const plus = it.querySelector(".plus"), minus = it.querySelector(".minus");
+    it.classList.toggle("open", open); q.setAttribute("aria-expanded", open);
+    const mob = matchMedia("(max-width: 767px)").matches;
+    gsap.to(q, { paddingBottom: open ? (mob ? 12 : 14) : (mob ? 22 : 26), duration: instant || REDUCED ? 0 : 0.32, ease: "power2.inOut", overwrite: "auto" });
+    const d = instant || REDUCED ? 0 : 0.32;
+    if (open) gsap.fromTo(a, { height: a.offsetHeight }, { height: "auto", duration: d, ease: "power2.inOut", overwrite: true, onComplete: () => ScrollTrigger.refresh() });
+    else gsap.fromTo(a, { height: a.offsetHeight }, { height: 0, duration: d, ease: "power2.inOut", overwrite: true, onComplete: () => ScrollTrigger.refresh() });
+    gsap.fromTo(a.firstElementChild, { autoAlpha: open ? 0 : 1 }, { autoAlpha: open ? 1 : 0, duration: d, ease: "power2.out" });
+    gsap.to(txt, { color: open ? "#8A6F3E" : "#2D3136", duration: 0.15, ease: "power2.out" });
+    gsap.to(minus, { opacity: open ? 1 : 0, rotation: open ? 0 : -90, duration: 0.2, ease: "power2.out" });
+    gsap.to(plus, { opacity: open ? 0 : 1, rotation: open ? 90 : 0, duration: 0.2, ease: "power2.out" });
+  };
+  items.forEach(it => {
+    const q = it.querySelector(".faq-q"), txt = q.querySelector("span");
+    q.addEventListener("click", () => {
+      const open = !it.classList.contains("open");
+      items.forEach(o => o !== it && o.classList.contains("open") && setItem(o, false));
+      setItem(it, open);
+    });
+    hoverFx(q, () => gsap.to(txt, { color: "#8A6F3E", ...fast }),
+      () => !it.classList.contains("open") && gsap.to(txt, { color: "#2D3136", ...fast }), "hover");   // tap already opens and colors it
+  });
+
+  /* ---------- Candidacy quiz ---------- */
+  const QUIZ = [
+    { q: "How close are you to your goal weight?", key: "goal", a: [
+      ["Within 10 to 15 pounds", "Close, with small stubborn areas", "near"],
+      ["At my goal already", "I want more muscle definition", "at"],
+      ["About 15 to 30 pounds away", "Some fat still covers the muscle", "mid"],
+      ["More than 30 pounds away", "Weight loss may be the first step", "far"]] },
+    { q: "Which area would you like to improve?", key: "area", a: [
+      ["Abdomen and flanks", "A firmer, more defined midsection", "Abdomen"],
+      ["Buttocks", "Lift, shape and firmness", "Buttocks"],
+      ["Arms", "Toned biceps and triceps", "Arms"],
+      ["Thighs or calves", "Stronger, more sculpted legs", "Thighs"]] },
+    { q: "How active are you right now?", key: "activity", a: [
+      ["Active most weeks", "I work out or move regularly", "active"],
+      ["Somewhat active", "I exercise now and then", "some"],
+      ["Getting started", "I want help building a routine", "starting"],
+      ["Limited right now", "Injury, surgery or other limits", "limited"]] }
+  ];
+  const answers = { goal: 0 };            // design shows the first answer selected
+  let step = 0;
+  const qCard = document.querySelector(".quiz-card"), body = qCard.querySelector(".quiz-body");
+  const stepLbl = qCard.querySelector(".step"), timeLbl = qCard.querySelector(".time"), bar = qCard.querySelector(".track i");
+  const next = qCard.querySelector(".quiz-next"), back = qCard.querySelector(".quiz-back"), note = qCard.querySelector(".quiz-note");
+  const CHECK = "images/icons/icon-check-ivory.png";
+
+  function paintAnswer(btn, sel, instant) {
+    const d = instant ? 0 : 0.3;
+    btn.classList.toggle("is-selected", sel); btn.setAttribute("aria-checked", sel);
+    gsap.to(btn, { backgroundColor: sel ? "#172A46" : "#F6F3EC", borderColor: sel ? "#172A46" : "rgba(45,49,54,0.14)", duration: d, ease: "power2.out", overwrite: "auto" });
+    gsap.to(btn.querySelector(".a-title"), { color: sel ? "#F6F3EC" : "#2D3136", duration: d, ease: "power2.out" });
+    gsap.to(btn.querySelector(".a-sub"), { color: sel ? "rgba(246,243,236,0.75)" : "rgba(45,49,54,0.62)", duration: d, ease: "power2.out" });
+    gsap.to(btn.querySelector(".box"), { backgroundColor: sel ? "#B89A62" : "#FFFFFF", borderColor: sel ? "#B89A62" : "rgba(45,49,54,0.3)", duration: d, ease: "power2.out" });
+    const tick = btn.querySelector(".box img");
+    if (sel && !instant) gsap.fromTo(tick, { scale: 0, autoAlpha: 0 }, { scale: 1, autoAlpha: 1, duration: 0.18, ease: "back.out(1.7)" });
+    else gsap.set(tick, { autoAlpha: sel ? 1 : 0, scale: 1 });
+  }
+  function renderStep(animate) {
+    const s = QUIZ[step], chosen = answers[s.key];
+    body.innerHTML = `<h3 class="question">${s.q}</h3><div class="answers" role="radiogroup" aria-label="${s.q}">` +
+      s.a.map((a, i) => `<button type="button" class="answer" role="radio" aria-checked="false" data-i="${i}"><span class="a-text"><span class="a-title">${a[0]}</span><span class="a-sub">${a[1]}</span></span><span class="box"><img src="${CHECK}" alt=""></span></button>`).join("") + `</div>`;
+    const btns = [...body.querySelectorAll(".answer")];
+    btns.forEach((b, i) => { paintAnswer(b, i === chosen, true); b.addEventListener("click", () => {
+      answers[s.key] = i; btns.forEach((o, j) => paintAnswer(o, j === i)); next.disabled = false; gsap.to(next, { opacity: 1, duration: 0.15 });
+    }); });
+    stepLbl.textContent = `Question ${step + 1} of ${QUIZ.length}`; timeLbl.textContent = "Takes about 30 seconds";
+    next.innerHTML = step === QUIZ.length - 1 ? "SEE MY RESULT" : "NEXT QUESTION";
+    next.disabled = chosen === undefined; gsap.set(next, { opacity: chosen === undefined ? 0.5 : 1 });
+    back.hidden = step === 0; note.hidden = false;
+    gsap.to(bar, { scaleX: (step + 1) / QUIZ.length, duration: animate ? 0.6 : 0, ease: "power3.out" });
+    if (animate && !REDUCED) gsap.from(body.children, { autoAlpha: 0, y: 12, duration: 0.4, stagger: 0.06, ease: "power3.out" });
+  }
+  function renderResult() {
+    const far = QUIZ[0].a[answers.goal][2] === "far", area = QUIZ[1].a[answers.area];
+    const areaName = area[0].toLowerCase();
+    body.innerHTML = far
+      ? `<div class="result"><h3 class="question">Let's start with a plan that fits.</h3><p>EMSCULPT NEO works best near your goal weight. Dr. Johnson's team can pair medical weight loss with contouring, so every step builds on the last. Your free consultation maps out the right order for you.</p></div>`
+      : `<div class="result"><h3 class="question">You look like a strong candidate.</h3><p>Based on your answers, EMSCULPT NEO for your ${areaName} could be a great fit. Book your $200 Mini Demo to feel the contractions for yourself and get a personalized plan at your free consultation.</p></div>`;
+    stepLbl.textContent = "Your result"; timeLbl.textContent = "All done";
+    next.innerHTML = "BOOK MY $200 DEMO"; next.disabled = false; gsap.set(next, { opacity: 1 });
+    back.hidden = false; back.textContent = "START OVER"; note.hidden = false;
+    gsap.to(bar, { scaleX: 1, duration: 0.6, ease: "power3.out" });
+    if (!REDUCED) gsap.from(body.children, { autoAlpha: 0, y: 12, duration: 0.4, ease: "power3.out" });
+    document.querySelector('.lead-form input[name="quiz"]').value = QUIZ.map(s => `${s.key}: ${s.a[answers[s.key]][0]}`).join("; ");
+  }
+  const swap = fn => REDUCED ? fn() : gsap.to(body, { autoAlpha: 0, y: -8, duration: 0.2, ease: "power2.in", onComplete: () => { fn(); gsap.to(body, { autoAlpha: 1, y: 0, duration: 0.01 }); } });
+  next.addEventListener("click", () => {
+    if (step === QUIZ.length) { scrollToEl(document.getElementById("book")); return; }
+    if (answers[QUIZ[step].key] === undefined) return;
+    step++;
+    swap(() => step === QUIZ.length ? renderResult() : renderStep(true));
+  });
+  back.addEventListener("click", () => {
+    if (step === QUIZ.length) { Object.keys(answers).forEach(k => delete answers[k]); answers.goal = 0; step = 0; back.textContent = "BACK"; }
+    else step = Math.max(0, step - 1);
+    swap(() => renderStep(true));
+  });
+  renderStep(false);
+
+  /* ---------- Lead form: validation, focus, loading and success ---------- */
+  const form = document.querySelector(".lead-form"), success = document.querySelector(".form-success");
+  form.querySelectorAll("input:not([type=checkbox]):not([type=hidden]), select").forEach(f => {
+    f.addEventListener("focus", () => gsap.to(f, { borderColor: "rgba(184,154,98,0.5)", boxShadow: "0 0 0 2px rgba(184,154,98,0.35)", duration: 0.18, ease: "power2.out" }));
+    f.addEventListener("blur",  () => gsap.to(f, { borderColor: "rgba(45,49,54,0.16)", boxShadow: "0 0 0 0 rgba(184,154,98,0)", duration: 0.18, ease: "power2.out" }));
+    f.addEventListener("input", () => f.closest(".field").classList.remove("err"));
+  });
+  const phoneOk = v => v.replace(/\D/g, "").length >= 10;
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    let ok = true;
+    form.querySelectorAll(".field").forEach(fl => {
+      const f = fl.querySelector("input,select");
+      const bad = !f.value.trim() || (f.type === "email" && !/^\S+@\S+\.\S+$/.test(f.value)) || (f.type === "tel" && !phoneOk(f.value));
+      fl.classList.toggle("err", bad); if (bad) ok = false;
+    });
+    const consent = form.querySelector(".consent"), cb = consent.querySelector("input");
+    consent.classList.toggle("err", !cb.checked); if (!cb.checked) ok = false;
+    if (!ok) { const first = form.querySelector(".err input, .err select"); first && first.focus();
+      if (!REDUCED) gsap.fromTo(form.querySelectorAll(".err"), { x: -4 }, { x: 0, duration: 0.4, ease: "elastic.out(1,0.3)" }); return; }
+
+    const btn = form.querySelector(".submit"), label = btn.querySelector(".label"), spin = btn.querySelector(".spinner");
+    btn.disabled = true; btn.setAttribute("aria-busy", "true");
+    gsap.to(label, { autoAlpha: 0, duration: 0.15 });
+    gsap.fromTo(spin, { autoAlpha: 0, scale: 0.6 }, { autoAlpha: 1, scale: 1, duration: 0.2, ease: "power2.out" });
+    const loop = gsap.to(spin, { rotation: 360, duration: 0.7, ease: "none", repeat: -1 });
+    const data = Object.fromEntries(new FormData(form).entries());
+    // TODO: connect to the Bodiatrics CRM or form endpoint. Replace the timeout with a fetch() POST of `data`.
+    window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: "emsculpt_lead_submit", area: data.area });
+    setTimeout(() => {
+      loop.kill();
+      gsap.timeline()
+        .to(spin, { autoAlpha: 0, duration: 0.1 })
+        .to(btn, { backgroundColor: "#B89A62", borderColor: "#B89A62", duration: 0.25, ease: "power2.out" }, "<")
+        .to(form, { autoAlpha: 0, y: -8, duration: 0.3, ease: "power2.in" }, "+=0.35")
+        .add(() => { form.style.display = "none"; success.style.display = "flex"; ScrollTrigger.refresh(); })
+        .fromTo(success, { autoAlpha: 0, y: 16 }, { autoAlpha: 1, y: 0, duration: 0.4, ease: "power3.out" });
+    }, 900);
+  });
+
+  /* ---------- Reduced motion: show everything and stop here ---------- */
+  if (REDUCED) { gsap.set("[data-hero-in], [data-animate], [data-stagger] > *, [data-img-reveal]", { autoAlpha: 1 }); return; }
+
+  const once = { once: true, fastScrollEnd: true };
+
+  /* ---------- Hero on load choreography ---------- */
+  (() => {
+    const copy = document.querySelector('[data-hero-in="fade"]'), cardWrap = document.querySelector('[data-hero-in="card"]');
+    const cardInner = cardWrap.querySelector(".hero-card"), rule = document.querySelector(".facts .rule");
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo(copy, { autoAlpha: 0 }, { autoAlpha: 1, duration: 1.05, ease: "power2.out" }, 0)
+      .fromTo(cardWrap, { autoAlpha: 0 }, { autoAlpha: 1, duration: 1.05, ease: "power2.out" }, 0)
+      .from(cardInner, HERO_BG ? { scale: 1.08, duration: 1.6, ease: Q } : { x: -72, scale: 0.94, duration: 1.25, ease: Q }, 0)
+      .from(copy.children, { y: MOBILE ? 12 : 20, duration: 1.1, ease: Q, stagger: 0.06 }, 0)
+      .from(rule, { scaleX: 0, transformOrigin: "left center", duration: 1.15, ease: Q }, 0.2);
+    const img = new Image(); img.src = "images/hero.jpg";
+    const ready = Promise.race([ img.decode ? img.decode().catch(() => {}) : Promise.resolve(), new Promise(r => setTimeout(r, 1200)) ]);
+    ready.then(() => requestAnimationFrame(() => requestAnimationFrame(() => tl.play())));
+  })();
+
+  /* ---------- Clip title reveals (H2 lines rise out of a mask) ---------- */
+  gsap.utils.toArray("[data-clip]").forEach(h => {
+    const lines = h.querySelectorAll(".line > span");
+    gsap.set(lines, { yPercent: 110 });
+    ScrollTrigger.create({ trigger: h, start: MOBILE ? "top 88%" : "top 80%", ...once,
+      onEnter: () => gsap.to(lines, { yPercent: 0, duration: 0.8, ease: "power3.out", stagger: 0.08 }) });
+  });
+
+  /* ---------- Generic reveals (site engine values) ---------- */
+  const k = MOBILE ? 0.5 : 1;
+  const FROM = { "fade-up": { y: 40 * k }, "fade-in": {} };
+  gsap.utils.toArray("[data-animate]").forEach(el => {
+    const from = FROM[el.dataset.animate] || {};
+    gsap.set(el, { autoAlpha: 0, ...from });
+    ScrollTrigger.create({ trigger: el, start: MOBILE ? "top 92%" : "top 85%", ...once,
+      onEnter: () => gsap.to(el, { autoAlpha: 1, x: 0, y: 0, duration: LOW_END ? 0.4 : 0.6, delay: parseFloat(el.dataset.delay || 0.08), ease: "power3.out", clearProps: "transform" }) });
+  });
+
+  /* ---------- Card grid staggers ---------- */
+  gsap.utils.toArray("[data-stagger]").forEach(grid => {
+    const kids = grid.children;
+    gsap.set(kids, { autoAlpha: 0, y: 30 });
+    ScrollTrigger.create({ trigger: grid, start: MOBILE ? "top 88%" : "top 80%", ...once,
+      onEnter: () => gsap.to(kids, { autoAlpha: 1, y: 0, duration: 0.7, ease: "expo.out", stagger: LOW_END ? 0.08 : 0.1, clearProps: "transform" }) });
+  });
+
+  /* ---------- Image slide reveals ---------- */
+  gsap.utils.toArray("[data-img-reveal]").forEach(img => {
+    gsap.set(img, { autoAlpha: 0, x: MOBILE ? 0 : -56, y: MOBILE ? 24 : 0 });
+    ScrollTrigger.create({ trigger: img, start: MOBILE ? "top 92%" : "top 85%", ...once, onEnter: () => {
+      gsap.to(img, { x: 0, y: 0, duration: 1.1, ease: Q });
+      gsap.to(img, { autoAlpha: 1, duration: 0.95, ease: Q });
+    }});
+  });
+
+  /* ---------- Stat counters ---------- */
+  const fmt = (v, el) => {
+    const n = Math.round(v);
+    return (el.hasAttribute("data-comma") ? n.toLocaleString("en-US") : String(n)) + (el.dataset.suffix || "");
+  };
+  document.querySelectorAll("[data-count]").forEach(el => {
+    const target = parseFloat(el.dataset.count), final = el.textContent, obj = { v: 0 };
+    el.textContent = fmt(0, el);
+    ScrollTrigger.create({ trigger: el, start: MOBILE ? "top 90%" : "top 85%", ...once, onEnter: () =>
+      gsap.to(obj, { v: target, duration: LOW_END ? 1 : 1.4, delay: 0.15, ease: "power2.out",
+        onUpdate: () => el.textContent = fmt(obj.v, el), onComplete: () => el.textContent = final }) });
+  });
+
+  /* ---------- Results chart: bars rise from the baseline ---------- */
+  const bars = gsap.utils.toArray(".bar");
+  if (bars.length) {
+    gsap.set(bars, { scaleY: 0, autoAlpha: 1, y: 0 });
+    gsap.set(".bar > *", { autoAlpha: 0 });
+    ScrollTrigger.create({ trigger: ".bars", start: MOBILE ? "top 88%" : "top 80%", ...once, onEnter: () => {
+      const tl = gsap.timeline();
+      tl.to(bars, { scaleY: 1, autoAlpha: 1, y: 0, duration: 1.1, ease: Q, stagger: 0.15 })
+        .to(".bar > *", { autoAlpha: 1, duration: 0.5, ease: "power2.out", stagger: 0.06 }, 0.45);
+    }});
+  }
+
+  /* ---------- Subtle parallax on the final CTA background (desktop only) ---------- */
+  if (!MOBILE) gsap.utils.toArray("[data-parallax]").forEach(el => {
+    const f = parseFloat(el.dataset.parallax || "0.3");
+    gsap.fromTo(el, { y: () => -f * 100 }, { y: () => f * 100, ease: "none",
+      scrollTrigger: { trigger: el.parentElement, start: "top bottom", end: "bottom top", scrub: 1, invalidateOnRefresh: true } });
+  });
+
+  /* ---------- Keep triggers accurate ---------- */
+  window.addEventListener("load", () => ScrollTrigger.refresh());
+  document.fonts && document.fonts.ready.then(() => ScrollTrigger.refresh());
+  document.querySelectorAll("img[loading='lazy']").forEach(i => i.addEventListener("load", () => ScrollTrigger.refresh(), { once: true }));
+  let rT; window.addEventListener("resize", () => { clearTimeout(rT); rT = setTimeout(() => ScrollTrigger.refresh(), 200); });
+})();
+</script>
+</body>
+</html>
