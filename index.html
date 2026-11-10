@@ -341,7 +341,27 @@ section{width:100%}
 .form-panel{flex:0 1 600px;width:600px;background:var(--white);padding:48px;display:flex;flex-direction:column;gap:20px;color:var(--ink);position:relative}
 .form-panel h3{font:600 34px/1.2 var(--serif);letter-spacing:-.5px}
 .form-panel .fsub{font-size:15px;line-height:1.4;color:#2D3136C7}
-#myFormEmbed{display:block;width:100%;border:0}
+.lead-form{display:grid;grid-template-columns:1fr 1fr;column-gap:16px;width:100%;color:var(--ink)}
+.lead-form>*{grid-column:1/-1;min-width:0}
+.lead-form__field{display:flex;flex-direction:column;margin:0 0 20px}
+.lead-form__field--half{grid-column:auto}
+.lead-form__label{margin:0 0 6px;font:600 13px/1.3 var(--sans);color:var(--ink)}
+.lead-form__input{display:block;width:100%;height:50px;margin:0;padding:0 16px;background:var(--cream);border:1px solid rgba(45,49,54,.16);border-radius:0;box-shadow:none;-webkit-appearance:none;appearance:none;font:400 15px/1.3 var(--sans);color:var(--ink);transition:border-color .18s,box-shadow .18s}
+textarea.lead-form__input{height:98px;min-height:98px;padding:16px;line-height:1.5;resize:vertical;overflow:auto}
+.lead-form__input::placeholder{color:rgba(45,49,54,.62);opacity:1}
+.lead-form__input:focus{border-color:rgba(184,154,98,.5);box-shadow:0 0 0 2px rgba(184,154,98,.35);outline:0}
+.lead-form__error{display:none;margin:0 0 16px;font-size:13px;line-height:1.4;color:#A94442}
+.lead-form .submit-btn{width:100%;height:52px;margin:0 0 20px;padding:0 24px;font-size:14px}
+.lead-form .submit-btn:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.lead-form .submit-btn:disabled{opacity:.6;cursor:not-allowed}
+.lead-form__consent{display:flex;align-items:flex-start}
+.lead-form__checkbox{-webkit-appearance:none;appearance:none;flex:0 0 18px;width:18px;height:18px;margin:2px 12px 0 0;padding:0;background:#fff;border:1px solid rgba(45,49,54,.4);border-radius:0;cursor:pointer;transition:background-color .2s,border-color .2s}
+.lead-form__checkbox:checked{background:var(--navy) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23F6F3EC' stroke-width='2.4'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/12px no-repeat;border-color:var(--navy)}
+.lead-form__checkbox:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.lead-form__consent-text{flex:1 1 0;min-width:0;font-size:12px;line-height:1.6;color:rgba(45,49,54,.78);cursor:pointer}
+.form-success-message{font-size:16px;line-height:1.6;color:rgba(45,49,54,.78)}
+.form-success-message h3{margin:0 0 4px;font:600 18px/1.4 var(--sans);letter-spacing:0;color:var(--navy)}
+@media (max-width:400px){.lead-form__field--half{grid-column:1/-1}}
 .form-disc{font-size:12px;line-height:1.6;color:#2D31369E}
 
 /* ===== Location ===== */
@@ -875,9 +895,134 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="form-panel" data-animate="fade-up">
     <h3>Book your demo</h3>
     <p class="fsub">Takes under a minute. Our team calls to confirm your appointment time.</p>
-    <iframe src="https://api.aevadigital.com/api/v1/forms/604/form-view/" title="Book your demo" width="100%"
-      onload="onPageLoad('production')" id="myFormEmbed" frameborder="0"></iframe>
-    <script type="text/javascript" src="https://aeva-static-bucket.s3.amazonaws.com/static/js/embedAevaScript.js"></script>
+    <form class="lead-form" novalidate>
+      <div class="lead-form__field lead-form__field--half">
+        <label for="first_name" class="lead-form__label">First Name</label>
+        <input id="first_name" name="first_name" type="text" placeholder="First Name" autocomplete="given-name" maxlength="30" required class="lead-form__input">
+      </div>
+      <div class="lead-form__field lead-form__field--half">
+        <label for="last_name" class="lead-form__label">Last Name</label>
+        <input id="last_name" name="last_name" type="text" placeholder="Last Name" autocomplete="family-name" maxlength="150" required class="lead-form__input">
+      </div>
+      <div class="lead-form__field lead-form__field--half">
+        <label for="phone" class="lead-form__label">Phone</label>
+        <input id="phone" name="phone" type="tel" placeholder="Phone" autocomplete="tel-national" inputmode="tel" maxlength="20" required class="lead-form__input">
+      </div>
+      <div class="lead-form__field lead-form__field--half">
+        <label for="email" class="lead-form__label">Email</label>
+        <input id="email" name="email" type="email" placeholder="Email" autocomplete="email" maxlength="254" required class="lead-form__input">
+      </div>
+      <div class="lead-form__field">
+        <label for="message" class="lead-form__label">What would you like to improve?</label>
+        <textarea id="message" name="message" rows="3" placeholder="Abdomen, buttocks, thighs, arms, calves..." maxlength="1000" class="lead-form__input"></textarea>
+      </div>
+      <div id="form-error" class="lead-form__error" role="alert" aria-live="polite"></div>
+      <button type="submit" class="btn btn-navy submit-btn">Book my $200 Demo</button>
+      <div class="lead-form__consent">
+        <input id="newsletter" name="newsletter" type="checkbox" required class="lead-form__checkbox">
+        <label for="newsletter" class="lead-form__consent-text">By submitting this form, you agree to receive text messages from Bodiatrics. Rates may be applied. You may unsubscribe any time by replying STOP.</label>
+      </div>
+    </form>
+    <script>
+    (function () {
+      document.querySelectorAll('.lead-form').forEach((form) => {
+        const submitBtn = form.querySelector('.submit-btn');
+        const errEl = form.querySelector('#form-error');
+
+        function showError(msg) {
+          if (!errEl) return;
+          errEl.textContent = msg;
+          errEl.style.display = msg ? 'block' : 'none';
+        }
+
+        form.addEventListener('submit', async function (e) {
+          e.preventDefault();
+          showError('');
+          submitBtn.disabled = true;
+
+          const first_name = form.querySelector('#first_name').value?.trim() || '';
+          const last_name = form.querySelector('#last_name').value?.trim() || '';
+          const email = form.querySelector('#email').value?.trim() || '';
+          // Accept formatted input like (470) 740-9156 or +1 470 740 9156
+          let phone = (form.querySelector('#phone').value || '').replace(/\D/g, '');
+          if (phone.length === 11 && phone.startsWith('1')) phone = phone.slice(1);
+          const message = form.querySelector('#message').value?.trim() || '';
+          const consent = form.querySelector('#newsletter');
+          const checkbox = consent?.checked ? 'on' : '';
+
+          const fail = (msg) => { showError(msg); submitBtn.disabled = false; };
+
+          if (!first_name || !last_name) return fail('Please enter your first and last name.');
+
+          const emailRe = /^[^\s@]+@[^\s@]+\.[A-Za-z]{2,}$/;
+          if (!emailRe.test(email)) return fail('Please enter a valid email address.');
+
+          const phoneRe = /^[0-9]{10}$/;
+          if (!phoneRe.test(phone)) return fail('Please enter a 10-digit US phone number.');
+
+          if (!checkbox) return fail('Please check the box to agree to receive text messages.');
+
+          const fd = new FormData();
+          fd.append('first_name', first_name);
+          fd.append('last_name', last_name);
+          fd.append('phone', `+1${phone}`);
+          fd.append('email', email);
+          fd.append('checkbox', checkbox);
+          fd.append('organization', '90ac72a5-c33a-431d-8332-e4f4796bd660');
+          fd.append('form', '604');
+          fd.append('message', message);
+          fd.append('form_location', window.location.href);
+
+          // Detect ad tracking params from URL
+          const urlParams = new URLSearchParams(window.location.search);
+          const trackingMap = {
+            gclid: 'google',
+            wbraid: 'google',
+            gbraid: 'google',
+            fbclid: 'meta',
+            ttclid: 'tiktok',
+          };
+          let trackingParam = '';
+          let adSource = 'other';
+          for (const [param, source] of Object.entries(trackingMap)) {
+            const val = urlParams.get(param);
+            if (val) {
+              trackingParam = val;
+              adSource = source;
+              break;
+            }
+          }
+          fd.append('tracking_param', trackingParam);
+          fd.append('ad_source', adSource);
+
+          try {
+            const res = await fetch('https://api.aevadigital.com/api/v1/contacts/add_contact_from_form/', {
+              method: 'POST',
+              body: fd,
+            });
+
+            if (!res.ok) {
+              const txt = await res.text().catch(() => res.statusText);
+              throw new Error(txt || 'Server error');
+            }
+
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({ 'event': 'form-success' });
+
+            form.style.display = 'none';
+            const thankYou = document.createElement('div');
+            thankYou.className = 'form-success-message';
+            thankYou.setAttribute('role', 'status');
+            thankYou.innerHTML = '<h3>Thank You!</h3><p>Your consultation request has been received. We\'ll be in touch shortly.</p>';
+            form.parentNode.insertBefore(thankYou, form.nextSibling);
+          } catch (err) {
+            console.error(err);
+            fail('Submission failed. Please try again.');
+          }
+        });
+      });
+    })();
+    </script>
     <p class="form-disc">New patients only. Results vary. Pricing for full treatment plans is reviewed at your consultation.</p>
   </div>
 </section>
